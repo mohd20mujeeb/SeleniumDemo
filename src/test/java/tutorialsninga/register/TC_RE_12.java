@@ -1,7 +1,4 @@
 package tutorialsninga.register;
-
-import static org.testng.Assert.assertTrue;
-
 import java.time.Duration;
 import java.util.Date;
 
@@ -24,7 +21,7 @@ public class TC_RE_12 {
 	  driver.findElement(By.linkText("Register")).click();
 	  Actions act = new Actions(driver);
 	  for(int i=1;i<=23;i++) {
-		  act.sendKeys(Keys.TAB).perform();
+	  act.sendKeys(Keys.TAB).perform();
 	  }
 	  act.sendKeys("Mohd").pause(Duration.ofSeconds(1))
 	  .sendKeys(Keys.TAB).pause(Duration.ofSeconds(1)) .sendKeys("Mujeeb")
@@ -42,10 +39,10 @@ public class TC_RE_12 {
 	  .build().perform();
 	  
 	  Assert.assertTrue(driver.findElement(By.linkText("Success")).isDisplayed());
-		driver.quit();	
+	  driver.quit();	
 }
 
-	  public   String generateEmale() {
+	    public   String generateEmale() {
 		return new Date().toString().replaceAll(" ", "").replaceAll("\\:","")+"@gmail.com";
 		
 }
