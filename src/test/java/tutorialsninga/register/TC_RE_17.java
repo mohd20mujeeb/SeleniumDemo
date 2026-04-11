@@ -1,8 +1,6 @@
 package tutorialsninga.register;
-
 import java.time.Duration;
 import java.util.Date;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,12 +13,12 @@ public class TC_RE_17 {
 	WebDriver driver;
 	@AfterMethod
 	public void teardown() {
-		driver.quit();
+	driver.quit();
 	}
 	@Test(dataProvider="passwordSupplier")
 public void verifyPasswordFollowingStandard(String passwordText)
 {
-		   driver = new ChromeDriver();
+		  driver = new ChromeDriver();
 		  driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	      driver.manage().window().maximize();
 	      driver.get("https://tutorialsninja.com/demo/");
@@ -39,13 +37,13 @@ public void verifyPasswordFollowingStandard(String passwordText)
 	      Assert.assertEquals(driver.findElement(By.xpath("//div[.='Password must be between 4 and 20 characters!']")).getText(),errormsg);
 	      
 }
-	public   String generateEmale() {
+	    public   String generateEmale() {
   		return new Date().toString().replaceAll(" ", "").replaceAll("\\:","")+"@gmail.com";
 }
-	@DataProvider(name="passwordSupplier")
-	public  Object[][] datapass()
-	{
-	  Object[][] data= {{"12345"},{"abcdefghi"},{"abcd12345"},{"ABCDE456#"},{"abcd123$"}};
-	  return data;
-	}
+	    @DataProvider(name="passwordSupplier")
+	     public  Object[][] datapass()
+	     {
+	      Object[][] data= {{"12345"},{"abcdefghi"},{"abcd12345"},{"ABCDE456#"},{"abcd123$"}};
+	      return data;
+	     }
 }

@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tutorialsninga.register.TC_RE_17">
+      <class name="tutorialsninga.register.TC_RE_15">
         <methods>
-          <include name="verifyPasswordFollowingStandard" invocation-numbers="0 1 2 3 4"/>
-          <include name="teardown"/>
+          <include name="verifyDataTestingOfRegisteringAccount"/>
         </methods>
-      </class> <!-- tutorialsninga.register.TC_RE_17 -->
+      </class> <!-- tutorialsninga.register.TC_RE_15 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
