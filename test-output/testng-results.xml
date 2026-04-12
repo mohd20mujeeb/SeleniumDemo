@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-10T19:09:47 IST" name="Default suite" finished-at="2026-04-10T19:09:52 IST" duration-ms="4913">
+  <suite started-at="2026-04-12T19:38:48 IST" name="Default suite" finished-at="2026-04-12T19:39:01 IST" duration-ms="12917">
     <groups>
     </groups>
-    <test started-at="2026-04-10T19:09:47 IST" name="Default test" finished-at="2026-04-10T19:09:52 IST" duration-ms="4913">
-      <class name="tutorialsninga.register.TC_RE_15">
-        <test-method signature="verifyDataTestingOfRegisteringAccount()[pri:0, instance:tutorialsninga.register.TC_RE_15@31304f14]" started-at="2026-04-10T19:09:47 IST" name="verifyDataTestingOfRegisteringAccount" finished-at="2026-04-10T19:09:52 IST" duration-ms="4871" status="PASS">
+    <test started-at="2026-04-12T19:38:48 IST" name="Default test" finished-at="2026-04-12T19:39:01 IST" duration-ms="12917">
+      <class name="tutorialsninga.register.TC_RE_18">
+        <test-method signature="verifyAllTextfieldSize()[pri:0, instance:tutorialsninga.register.TC_RE_18@2a4fb17b]" started-at="2026-04-12T19:38:48 IST" name="verifyAllTextfieldSize" finished-at="2026-04-12T19:39:01 IST" duration-ms="12721" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyDataTestingOfRegisteringAccount -->
-      </class> <!-- tutorialsninga.register.TC_RE_15 -->
+        </test-method> <!-- verifyAllTextfieldSize -->
+      </class> <!-- tutorialsninga.register.TC_RE_18 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
