@@ -201,3 +201,12 @@ public class TC_RE_15 {
         return new Date().toString().replaceAll(" ", "").replaceAll("\\:", "") + "@gmail.com";
     }
 }
+
+
+//driver.navigate().to("https://tutorialsninja.com/demo/index.php?route=account/register");
+//
+//TakesScreenshot ts = (TakesScreenshot)driver;
+//File srcScreenshot = ts.getScreenshotAs(OutputType.FILE);
+//FileHandler.copy(srcScreenshot,new File(System.getProperty("user.dir")+"\\Screenshot\\registerPageExpectedAligment.png"));
+//
+//Assert.assertFalse(CommonUtils.compareTwoScreenshots(System.getProperty("user.dir")+"\\Screenshots\\registerPageActualAligment.png", System.getProperty("user.dir")+"\\Screenshots\\registerPageExpectedAligment.png"));
