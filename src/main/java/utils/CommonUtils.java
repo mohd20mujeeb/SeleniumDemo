@@ -13,7 +13,7 @@ import ru.yandex.qatools.ashot.comparison.ImageDiff;
 import ru.yandex.qatools.ashot.comparison.ImageDiffer;
 
 public class CommonUtils {
-	public  String generateEmale() {
+	public static String generateEmale() {
 		return new Date().toString().replaceAll(" ", "").replaceAll("\\:","")+"@gmail.com";
 	}
 
