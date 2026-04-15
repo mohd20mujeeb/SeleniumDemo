@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tutorialsninga.register.TC_RE_19">
+      <class name="tutorialsninga.register.TC_RE_23">
         <methods>
-          <include name="tearDown"/>
-          <include name="verifyTextfieldSpaceTriming"/>
+          <include name="verifyAllRegisterLink"/>
         </methods>
-      </class> <!-- tutorialsninga.register.TC_RE_19 -->
+      </class> <!-- tutorialsninga.register.TC_RE_23 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
