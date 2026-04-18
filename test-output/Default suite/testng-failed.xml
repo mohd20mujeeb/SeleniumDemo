@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tutorialsninga.register.TC_RE_10">
+      <class name="tutorialsninga.register.TC_RE_11">
         <methods>
-          <include name="varifyRegisterWithInvalidEmail"/>
-          <include name="setup"/>
           <include name="teardown"/>
+          <include name="varifyRegisterWithInvalidTelephone"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- tutorialsninga.register.TC_RE_10 -->
+      </class> <!-- tutorialsninga.register.TC_RE_11 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
