@@ -20,13 +20,15 @@ public class TC_RE_17 {
 
 	@AfterMethod
 	public void teardown() {
-		driver.quit();
+		if (driver != null) {
+			driver.quit();
+		}
 	}
 
 	@BeforeMethod
 	public void setup() {
 
-		String browserName = "chrome";
+		String browserName = "firefox";
 		if (browserName.equals("chrome")) {
 			driver = new ChromeDriver();
 		} else if (browserName.equals("firefox")) {

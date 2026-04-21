@@ -19,7 +19,9 @@ public class TC_RE_16 {
 
 	@AfterMethod
 	public void teardown() {
-		driver.quit();
+		if (driver != null) {
+			driver.quit();
+		}
 	}
 
 	@BeforeMethod
