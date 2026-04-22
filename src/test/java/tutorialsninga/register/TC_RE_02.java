@@ -6,6 +6,9 @@ import java.util.Properties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+
 
 import jakarta.mail.Address;
 import jakarta.mail.BodyPart;
@@ -17,10 +20,19 @@ import jakarta.mail.internet.InternetAddress;
 import jakarta.mail.internet.MimeMultipart;
 
 public class TC_RE_02 {
-	public static void main(String[] args) {
+	WebDriver driver;
+	@AfterMethod
+	public void teardown() {
+		if (driver != null) {
+			driver.quit();
+		}
+	}
+	
+	     @Test
+	     public void verifyConfirationMail() { 
 		String email = "mohd.14mujeeb@gmail.com";
 		String appPass = "xndv fgjz ozkv qpwc";
-		WebDriver driver = new ChromeDriver();
+		 driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.get("https://www.amazon.in/");

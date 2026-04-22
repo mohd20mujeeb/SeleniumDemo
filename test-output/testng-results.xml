@@ -1,17 +1,821 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="31" passed="21" failed="10" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-20T16:20:47 IST" name="Default suite" finished-at="2026-04-20T16:20:58 IST" duration-ms="11224">
+  <suite started-at="2026-04-21T12:59:34 IST" name="Suite" finished-at="2026-04-21T13:07:13 IST" duration-ms="458928">
     <groups>
     </groups>
-    <test started-at="2026-04-20T16:20:47 IST" name="Default test" finished-at="2026-04-20T16:20:58 IST" duration-ms="11224">
-      <class name="tutorialsninga.register.TC_RE_26">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninga.register.TC_RE_26@7b2bbc3]" started-at="2026-04-20T16:20:47 IST" name="setup" finished-at="2026-04-20T16:20:55 IST" duration-ms="8234" status="PASS">
+    <test started-at="2026-04-21T12:59:34 IST" name="Test" finished-at="2026-04-21T13:07:13 IST" duration-ms="458928">
+      <class name="tutorialsninga.register.TC_RE_14">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninga.register.TC_RE_14@b3ca52e]" started-at="2026-04-21T13:03:20 IST" name="setup" finished-at="2026-04-21T13:03:27 IST" duration-ms="7696" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="varifyRegisterPageUI()[pri:0, instance:tutorialsninga.register.TC_RE_26@7b2bbc3]" started-at="2026-04-20T16:20:55 IST" name="varifyRegisterPageUI" finished-at="2026-04-20T16:20:57 IST" duration-ms="2446" status="FAIL">
+        <test-method signature="verifyMandatoryFieldsSymbolAndColor()[pri:0, instance:tutorialsninga.register.TC_RE_14@b3ca52e]" started-at="2026-04-21T13:03:27 IST" name="verifyMandatoryFieldsSymbolAndColor" finished-at="2026-04-21T13:03:29 IST" duration-ms="1428" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyMandatoryFieldsSymbolAndColor -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninga.register.TC_RE_14@b3ca52e]" started-at="2026-04-21T13:03:29 IST" name="teardown" finished-at="2026-04-21T13:03:29 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tutorialsninga.register.TC_RE_14 -->
+      <class name="tutorialsninga.register.TC_RE_15">
+        <test-method signature="verifyDataTestingOfRegisteringAccount()[pri:0, instance:tutorialsninga.register.TC_RE_15@45c7e403]" started-at="2026-04-21T13:03:29 IST" name="verifyDataTestingOfRegisteringAccount" finished-at="2026-04-21T13:03:37 IST" duration-ms="8634" status="FAIL">
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=147.0.7727.56)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b092b1fb195a8637db449400deca7337, get {url=http://localhost/opencart}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62171}, goog:processID: 21668, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62171/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b092b1fb195a8637db449400deca7337]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=147.0.7727.56)
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b092b1fb195a8637db449400deca7337, get {url=http://localhost/opencart}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62171}, goog:processID: 21668, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62171/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b092b1fb195a8637db449400deca7337
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:372)
+at tutorialsninga.register.TC_RE_15.verifyDataTestingOfRegisteringAccount(TC_RE_15.java:128)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:744)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDataTestingOfRegisteringAccount -->
+      </class> <!-- tutorialsninga.register.TC_RE_15 -->
+      <class name="tutorialsninga.register.TC_RE_16">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninga.register.TC_RE_16@2925bf5b]" started-at="2026-04-21T13:03:37 IST" name="setup" finished-at="2026-04-21T13:03:45 IST" duration-ms="7315" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="varifyRegisterByEnteringSpacce()[pri:0, instance:tutorialsninga.register.TC_RE_16@2925bf5b]" started-at="2026-04-21T13:03:45 IST" name="varifyRegisterByEnteringSpacce" finished-at="2026-04-21T13:03:50 IST" duration-ms="5453" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- varifyRegisterByEnteringSpacce -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninga.register.TC_RE_16@2925bf5b]" started-at="2026-04-21T13:03:50 IST" name="teardown" finished-at="2026-04-21T13:03:52 IST" duration-ms="1737" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tutorialsninga.register.TC_RE_16 -->
+      <class name="tutorialsninga.register.TC_RE_17">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninga.register.TC_RE_17@710f4dc7]" started-at="2026-04-21T13:03:52 IST" name="setup" finished-at="2026-04-21T13:04:04 IST" duration-ms="11618" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyPasswordFollowingStandard(java.lang.String)[pri:0, instance:tutorialsninga.register.TC_RE_17@710f4dc7]" started-at="2026-04-21T13:04:04 IST" name="verifyPasswordFollowingStandard" data-provider="passwordSupplier" finished-at="2026-04-21T13:04:14 IST" duration-ms="10176" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[12345]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[.='Password must be between 4 and 20 characters!']"}
+  (Session info: chrome=147.0.7727.56)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f77794d17d1b7b6ec6ba3dcd8f1f59d6, findElement {value=//div[.='Password must be between 4 and 20 characters!'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64534}, goog:processID: 7556, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64534/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f77794d17d1b7b6ec6ba3dcd8f1f59d6]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[.='Password must be between 4 and 20 characters!']"}
+  (Session info: chrome=147.0.7727.56)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f77794d17d1b7b6ec6ba3dcd8f1f59d6, findElement {value=//div[.='Password must be between 4 and 20 characters!'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64534}, goog:processID: 7556, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64534/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f77794d17d1b7b6ec6ba3dcd8f1f59d6
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
+at tutorialsninga.register.TC_RE_17.verifyPasswordFollowingStandard(TC_RE_17.java:46)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:744)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPasswordFollowingStandard -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninga.register.TC_RE_17@710f4dc7]" started-at="2026-04-21T13:04:14 IST" name="teardown" finished-at="2026-04-21T13:04:14 IST" duration-ms="668" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninga.register.TC_RE_17@710f4dc7]" started-at="2026-04-21T13:04:14 IST" name="setup" finished-at="2026-04-21T13:04:30 IST" duration-ms="16091" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyPasswordFollowingStandard(java.lang.String)[pri:0, instance:tutorialsninga.register.TC_RE_17@710f4dc7]" started-at="2026-04-21T13:04:30 IST" name="verifyPasswordFollowingStandard" data-provider="passwordSupplier" finished-at="2026-04-21T13:04:39 IST" duration-ms="8742" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[abcdefghi]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[.='Password must be between 4 and 20 characters!']"}
+  (Session info: chrome=147.0.7727.56)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ce8b5fc9b11634446ee9d4076822673a, findElement {value=//div[.='Password must be between 4 and 20 characters!'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61013}, goog:processID: 15692, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61013/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ce8b5fc9b11634446ee9d4076822673a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[.='Password must be between 4 and 20 characters!']"}
+  (Session info: chrome=147.0.7727.56)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ce8b5fc9b11634446ee9d4076822673a, findElement {value=//div[.='Password must be between 4 and 20 characters!'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61013}, goog:processID: 15692, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61013/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ce8b5fc9b11634446ee9d4076822673a
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
+at tutorialsninga.register.TC_RE_17.verifyPasswordFollowingStandard(TC_RE_17.java:46)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:744)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPasswordFollowingStandard -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninga.register.TC_RE_17@710f4dc7]" started-at="2026-04-21T13:04:39 IST" name="teardown" finished-at="2026-04-21T13:04:39 IST" duration-ms="222" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninga.register.TC_RE_17@710f4dc7]" started-at="2026-04-21T13:04:39 IST" name="setup" finished-at="2026-04-21T13:04:52 IST" duration-ms="12431" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyPasswordFollowingStandard(java.lang.String)[pri:0, instance:tutorialsninga.register.TC_RE_17@710f4dc7]" started-at="2026-04-21T13:04:52 IST" name="verifyPasswordFollowingStandard" data-provider="passwordSupplier" finished-at="2026-04-21T13:05:01 IST" duration-ms="8709" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[abcd12345]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[.='Password must be between 4 and 20 characters!']"}
+  (Session info: chrome=147.0.7727.56)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1d2182d0db3bf6b21f268ac7d0c7e3f4, findElement {value=//div[.='Password must be between 4 and 20 characters!'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59255}, goog:processID: 20684, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59255/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1d2182d0db3bf6b21f268ac7d0c7e3f4]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[.='Password must be between 4 and 20 characters!']"}
+  (Session info: chrome=147.0.7727.56)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [1d2182d0db3bf6b21f268ac7d0c7e3f4, findElement {value=//div[.='Password must be between 4 and 20 characters!'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59255}, goog:processID: 20684, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59255/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1d2182d0db3bf6b21f268ac7d0c7e3f4
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
+at tutorialsninga.register.TC_RE_17.verifyPasswordFollowingStandard(TC_RE_17.java:46)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:744)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPasswordFollowingStandard -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninga.register.TC_RE_17@710f4dc7]" started-at="2026-04-21T13:05:01 IST" name="teardown" finished-at="2026-04-21T13:05:01 IST" duration-ms="219" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninga.register.TC_RE_17@710f4dc7]" started-at="2026-04-21T13:05:01 IST" name="setup" finished-at="2026-04-21T13:05:07 IST" duration-ms="5864" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyPasswordFollowingStandard(java.lang.String)[pri:0, instance:tutorialsninga.register.TC_RE_17@710f4dc7]" started-at="2026-04-21T13:05:07 IST" name="verifyPasswordFollowingStandard" data-provider="passwordSupplier" finished-at="2026-04-21T13:05:15 IST" duration-ms="8237" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ABCDE456#]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[.='Password must be between 4 and 20 characters!']"}
+  (Session info: chrome=147.0.7727.56)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [da50dbe90fd93a96366de46bf0c604b5, findElement {value=//div[.='Password must be between 4 and 20 characters!'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59413}, goog:processID: 16184, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59413/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: da50dbe90fd93a96366de46bf0c604b5]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[.='Password must be between 4 and 20 characters!']"}
+  (Session info: chrome=147.0.7727.56)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [da50dbe90fd93a96366de46bf0c604b5, findElement {value=//div[.='Password must be between 4 and 20 characters!'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59413}, goog:processID: 16184, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59413/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: da50dbe90fd93a96366de46bf0c604b5
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
+at tutorialsninga.register.TC_RE_17.verifyPasswordFollowingStandard(TC_RE_17.java:46)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:744)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPasswordFollowingStandard -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninga.register.TC_RE_17@710f4dc7]" started-at="2026-04-21T13:05:15 IST" name="teardown" finished-at="2026-04-21T13:05:15 IST" duration-ms="246" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninga.register.TC_RE_17@710f4dc7]" started-at="2026-04-21T13:05:15 IST" name="setup" finished-at="2026-04-21T13:05:21 IST" duration-ms="5887" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyPasswordFollowingStandard(java.lang.String)[pri:0, instance:tutorialsninga.register.TC_RE_17@710f4dc7]" started-at="2026-04-21T13:05:21 IST" name="verifyPasswordFollowingStandard" data-provider="passwordSupplier" finished-at="2026-04-21T13:05:28 IST" duration-ms="7337" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[abcd123$]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[.='Password must be between 4 and 20 characters!']"}
+  (Session info: chrome=147.0.7727.56)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [533596b1f7d67ab6bb6a2f4cab71f8ae, findElement {value=//div[.='Password must be between 4 and 20 characters!'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59807}, goog:processID: 24792, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59807/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 533596b1f7d67ab6bb6a2f4cab71f8ae]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[.='Password must be between 4 and 20 characters!']"}
+  (Session info: chrome=147.0.7727.56)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [533596b1f7d67ab6bb6a2f4cab71f8ae, findElement {value=//div[.='Password must be between 4 and 20 characters!'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59807}, goog:processID: 24792, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59807/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 533596b1f7d67ab6bb6a2f4cab71f8ae
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
+at tutorialsninga.register.TC_RE_17.verifyPasswordFollowingStandard(TC_RE_17.java:46)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:744)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPasswordFollowingStandard -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninga.register.TC_RE_17@710f4dc7]" started-at="2026-04-21T13:05:28 IST" name="teardown" finished-at="2026-04-21T13:05:29 IST" duration-ms="259" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tutorialsninga.register.TC_RE_17 -->
+      <class name="tutorialsninga.register.TC_RE_10">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninga.register.TC_RE_10@3a52dba3]" started-at="2026-04-21T13:01:51 IST" name="setup" finished-at="2026-04-21T13:02:00 IST" duration-ms="8526" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="varifyRegisterWithInvalidEmail()[pri:0, instance:tutorialsninga.register.TC_RE_10@3a52dba3]" started-at="2026-04-21T13:02:00 IST" name="varifyRegisterWithInvalidEmail" finished-at="2026-04-21T13:02:25 IST" duration-ms="24853" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- varifyRegisterWithInvalidEmail -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninga.register.TC_RE_10@3a52dba3]" started-at="2026-04-21T13:02:25 IST" name="teardown" finished-at="2026-04-21T13:02:28 IST" duration-ms="2946" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tutorialsninga.register.TC_RE_10 -->
+      <class name="tutorialsninga.register.TC_RE_11">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninga.register.TC_RE_11@2a5c8d3f]" started-at="2026-04-21T13:02:28 IST" name="setup" finished-at="2026-04-21T13:02:37 IST" duration-ms="9620" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="varifyRegisterWithInvalidTelephone()[pri:0, instance:tutorialsninga.register.TC_RE_11@2a5c8d3f]" started-at="2026-04-21T13:02:37 IST" name="varifyRegisterWithInvalidTelephone" finished-at="2026-04-21T13:02:47 IST" duration-ms="9727" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[.='Invalid Telephone Number']"}
+  (Session info: chrome=147.0.7727.56)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [01af0975b604fd9e25831012a8653b6b, findElement {value=//div[.='Invalid Telephone Number'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52735}, goog:processID: 21976, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52735/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 01af0975b604fd9e25831012a8653b6b]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[.='Invalid Telephone Number']"}
+  (Session info: chrome=147.0.7727.56)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [01af0975b604fd9e25831012a8653b6b, findElement {value=//div[.='Invalid Telephone Number'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52735}, goog:processID: 21976, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52735/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 01af0975b604fd9e25831012a8653b6b
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
+at tutorialsninga.register.TC_RE_11.varifyRegisterWithInvalidTelephone(TC_RE_11.java:43)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:744)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- varifyRegisterWithInvalidTelephone -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninga.register.TC_RE_11@2a5c8d3f]" started-at="2026-04-21T13:02:47 IST" name="teardown" finished-at="2026-04-21T13:02:47 IST" duration-ms="475" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tutorialsninga.register.TC_RE_11 -->
+      <class name="tutorialsninga.register.TC_RE_12">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninga.register.TC_RE_12@752325ad]" started-at="2026-04-21T13:02:47 IST" name="setup" finished-at="2026-04-21T13:02:55 IST" duration-ms="7570" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="registerUsingKeyboard()[pri:0, instance:tutorialsninga.register.TC_RE_12@752325ad]" started-at="2026-04-21T13:02:55 IST" name="registerUsingKeyboard" finished-at="2026-04-21T13:03:11 IST" duration-ms="15451" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerUsingKeyboard -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninga.register.TC_RE_12@752325ad]" started-at="2026-04-21T13:03:11 IST" name="teardown" finished-at="2026-04-21T13:03:11 IST" duration-ms="370" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tutorialsninga.register.TC_RE_12 -->
+      <class name="tutorialsninga.register.TC_RE_13">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninga.register.TC_RE_13@279fedbd]" started-at="2026-04-21T13:03:11 IST" name="setup" finished-at="2026-04-21T13:03:18 IST" duration-ms="7380" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyPlaceholder()[pri:0, instance:tutorialsninga.register.TC_RE_13@279fedbd]" started-at="2026-04-21T13:03:18 IST" name="verifyPlaceholder" finished-at="2026-04-21T13:03:19 IST" duration-ms="687" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPlaceholder -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninga.register.TC_RE_13@279fedbd]" started-at="2026-04-21T13:03:19 IST" name="teardown" finished-at="2026-04-21T13:03:20 IST" duration-ms="644" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tutorialsninga.register.TC_RE_13 -->
+      <class name="tutorialsninga.register.TC_RE_18">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninga.register.TC_RE_18@1ff4931d]" started-at="2026-04-21T13:05:29 IST" name="setup" finished-at="2026-04-21T13:05:36 IST" duration-ms="7258" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyRegisteringAccountFieldsHeightWidthAligment()[pri:0, instance:tutorialsninga.register.TC_RE_18@1ff4931d]" started-at="2026-04-21T13:05:36 IST" name="verifyRegisteringAccountFieldsHeightWidthAligment" finished-at="2026-04-21T13:06:01 IST" duration-ms="24904" status="FAIL">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: stale element not found
+  (Session info: chrome=147.0.7727.56)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7b9067d87faa41f6a0cee5f826d41726, getElementText {id=f.DC7E8BF6A45771A13754AD888671F938.d.D9B2F9C7E5F22534E2B1855AB59F4CE6.e.281}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64216}, goog:processID: 10684, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64216/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (7b9067d87faa41f6a0cee5f826d41726)] -> xpath: //input[@id='input-lastname']/following-sibling::div]
+Session ID: 7b9067d87faa41f6a0cee5f826d41726]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=147.0.7727.56)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.41.0', revision: '9fc754f'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.12'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7b9067d87faa41f6a0cee5f826d41726, getElementText {id=f.DC7E8BF6A45771A13754AD888671F938.d.D9B2F9C7E5F22534E2B1855AB59F4CE6.e.281}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64216}, goog:processID: 10684, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64216/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (7b9067d87faa41f6a0cee5f826d41726)] -> xpath: //input[@id='input-lastname']/following-sibling::div]
+Session ID: 7b9067d87faa41f6a0cee5f826d41726
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:191)
+at tutorialsninga.register.TC_RE_18.verifyRegisteringAccountFieldsHeightWidthAligment(TC_RE_18.java:135)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:744)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegisteringAccountFieldsHeightWidthAligment -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninga.register.TC_RE_18@1ff4931d]" started-at="2026-04-21T13:06:01 IST" name="teardown" finished-at="2026-04-21T13:06:01 IST" duration-ms="226" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tutorialsninga.register.TC_RE_18 -->
+      <class name="tutorialsninga.register.TC_RE_19">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninga.register.TC_RE_19@65e98b1c]" started-at="2026-04-21T13:06:01 IST" name="setup" finished-at="2026-04-21T13:06:07 IST" duration-ms="5636" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyTextfieldSpaceTriming()[pri:0, instance:tutorialsninga.register.TC_RE_19@65e98b1c]" started-at="2026-04-21T13:06:07 IST" name="verifyTextfieldSpaceTriming" finished-at="2026-04-21T13:06:11 IST" duration-ms="4781" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+expected [Mohd] but found [      Mohd      ],
+expected [Mujeeb] but found [      Mujeeb     ],
+expected [8858476236] but found [    8858476236    ]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+expected [Mohd] but found [      Mohd      ],
+expected [Mujeeb] but found [      Mujeeb     ],
+expected [8858476236] but found [    8858476236    ]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+at tutorialsninga.register.TC_RE_19.verifyTextfieldSpaceTriming(TC_RE_19.java:53)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:744)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTextfieldSpaceTriming -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninga.register.TC_RE_19@65e98b1c]" started-at="2026-04-21T13:06:11 IST" name="teardown" finished-at="2026-04-21T13:06:12 IST" duration-ms="181" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tutorialsninga.register.TC_RE_19 -->
+      <class name="tutorialsninga.register.TC_RE_25">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninga.register.TC_RE_25@2362f559]" started-at="2026-04-21T13:06:52 IST" name="setup" finished-at="2026-04-21T13:06:57 IST" duration-ms="5550" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyRegisterPage()[pri:0, instance:tutorialsninga.register.TC_RE_25@2362f559]" started-at="2026-04-21T13:06:57 IST" name="verifyRegisterPage" finished-at="2026-04-21T13:06:57 IST" duration-ms="98" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegisterPage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninga.register.TC_RE_25@2362f559]" started-at="2026-04-21T13:06:57 IST" name="teardown" finished-at="2026-04-21T13:06:58 IST" duration-ms="239" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tutorialsninga.register.TC_RE_25 -->
+      <class name="tutorialsninga.register.TC_RE_03">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninga.register.TC_RE_03@fbd1f6]" started-at="2026-04-21T13:00:40 IST" name="setup" finished-at="2026-04-21T13:00:48 IST" duration-ms="7367" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyRegisterAllFields()[pri:0, instance:tutorialsninga.register.TC_RE_03@fbd1f6]" started-at="2026-04-21T13:00:48 IST" name="verifyRegisterAllFields" finished-at="2026-04-21T13:00:52 IST" duration-ms="4557" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegisterAllFields -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninga.register.TC_RE_03@fbd1f6]" started-at="2026-04-21T13:00:52 IST" name="teardown" finished-at="2026-04-21T13:00:52 IST" duration-ms="332" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tutorialsninga.register.TC_RE_03 -->
+      <class name="tutorialsninga.register.TC_RE_26">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninga.register.TC_RE_26@b2c9a9c]" started-at="2026-04-21T13:06:58 IST" name="setup" finished-at="2026-04-21T13:07:03 IST" duration-ms="5255" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="varifyRegisterPageUI()[pri:0, instance:tutorialsninga.register.TC_RE_26@b2c9a9c]" started-at="2026-04-21T13:07:03 IST" name="varifyRegisterPageUI" finished-at="2026-04-21T13:07:04 IST" duration-ms="1642" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -22,7 +826,7 @@ at org.testng.Assert.fail(Assert.java:111)
 at org.testng.Assert.failNotEquals(Assert.java:1590)
 at org.testng.Assert.assertTrue(Assert.java:57)
 at org.testng.Assert.assertTrue(Assert.java:67)
-at tutorialsninga.register.TC_RE_26.varifyRegisterPageUI(TC_RE_26.java:73)
+at tutorialsninga.register.TC_RE_26.varifyRegisterPageUI(TC_RE_26.java:52)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -57,11 +861,203 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- varifyRegisterPageUI -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninga.register.TC_RE_26@7b2bbc3]" started-at="2026-04-20T16:20:57 IST" name="teardown" finished-at="2026-04-20T16:20:58 IST" duration-ms="470" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninga.register.TC_RE_26@b2c9a9c]" started-at="2026-04-21T13:07:04 IST" name="teardown" finished-at="2026-04-21T13:07:05 IST" duration-ms="368" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- tutorialsninga.register.TC_RE_26 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="tutorialsninga.register.TC_RE_04">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninga.register.TC_RE_04@1ce24091]" started-at="2026-04-21T13:00:52 IST" name="setup" finished-at="2026-04-21T13:00:58 IST" duration-ms="5601" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyErrormessageAllFields()[pri:0, instance:tutorialsninga.register.TC_RE_04@1ce24091]" started-at="2026-04-21T13:00:58 IST" name="verifyErrormessageAllFields" finished-at="2026-04-21T13:00:59 IST" duration-ms="1257" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyErrormessageAllFields -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninga.register.TC_RE_04@1ce24091]" started-at="2026-04-21T13:00:59 IST" name="teardown" finished-at="2026-04-21T13:01:00 IST" duration-ms="313" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tutorialsninga.register.TC_RE_04 -->
+      <class name="tutorialsninga.register.TC_RE_27">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninga.register.TC_RE_27@4c178a76]" started-at="2026-04-21T13:07:05 IST" name="setup" finished-at="2026-04-21T13:07:10 IST" duration-ms="5303" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="varifyRegisterPageUI()[pri:0, instance:tutorialsninga.register.TC_RE_27@4c178a76]" started-at="2026-04-21T13:07:10 IST" name="varifyRegisterPageUI" finished-at="2026-04-21T13:07:12 IST" duration-ms="2379" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- varifyRegisterPageUI -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninga.register.TC_RE_27@4c178a76]" started-at="2026-04-21T13:07:12 IST" name="teardown" finished-at="2026-04-21T13:07:13 IST" duration-ms="301" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tutorialsninga.register.TC_RE_27 -->
+      <class name="tutorialsninga.register.TC_RE_05">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninga.register.TC_RE_05@5dda768f]" started-at="2026-04-21T13:01:00 IST" name="setup" finished-at="2026-04-21T13:01:07 IST" duration-ms="7458" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyRegisterNewsletter()[pri:0, instance:tutorialsninga.register.TC_RE_05@5dda768f]" started-at="2026-04-21T13:01:07 IST" name="verifyRegisterNewsletter" finished-at="2026-04-21T13:01:14 IST" duration-ms="6659" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegisterNewsletter -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninga.register.TC_RE_05@5dda768f]" started-at="2026-04-21T13:01:14 IST" name="teardown" finished-at="2026-04-21T13:01:14 IST" duration-ms="551" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tutorialsninga.register.TC_RE_05 -->
+      <class name="tutorialsninga.register.TC_RE_06">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninga.register.TC_RE_06@7a8c8dcf]" started-at="2026-04-21T13:01:14 IST" name="setup" finished-at="2026-04-21T13:01:23 IST" duration-ms="8216" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyRegisterNewsletterNo()[pri:0, instance:tutorialsninga.register.TC_RE_06@7a8c8dcf]" started-at="2026-04-21T13:01:23 IST" name="verifyRegisterNewsletterNo" finished-at="2026-04-21T13:01:26 IST" duration-ms="3395" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegisterNewsletterNo -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninga.register.TC_RE_06@7a8c8dcf]" started-at="2026-04-21T13:01:26 IST" name="teardown" finished-at="2026-04-21T13:01:26 IST" duration-ms="193" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tutorialsninga.register.TC_RE_06 -->
+      <class name="tutorialsninga.register.TC_RE_21">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninga.register.TC_RE_21@6ad82709]" started-at="2026-04-21T13:06:18 IST" name="setup" finished-at="2026-04-21T13:06:23 IST" duration-ms="5241" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyPolicyCheckBox()[pri:0, instance:tutorialsninga.register.TC_RE_21@6ad82709]" started-at="2026-04-21T13:06:23 IST" name="verifyPolicyCheckBox" finished-at="2026-04-21T13:06:26 IST" duration-ms="2597" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPolicyCheckBox -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninga.register.TC_RE_21@6ad82709]" started-at="2026-04-21T13:06:26 IST" name="teardown" finished-at="2026-04-21T13:06:26 IST" duration-ms="426" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tutorialsninga.register.TC_RE_21 -->
+      <class name="tutorialsninga.register.TC_RE_22">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninga.register.TC_RE_22@510f3d34]" started-at="2026-04-21T13:06:26 IST" name="setup" finished-at="2026-04-21T13:06:32 IST" duration-ms="5772" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyPassword()[pri:0, instance:tutorialsninga.register.TC_RE_22@510f3d34]" started-at="2026-04-21T13:06:32 IST" name="verifyPassword" finished-at="2026-04-21T13:06:32 IST" duration-ms="116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPassword -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninga.register.TC_RE_22@510f3d34]" started-at="2026-04-21T13:06:32 IST" name="teardown" finished-at="2026-04-21T13:06:32 IST" duration-ms="385" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tutorialsninga.register.TC_RE_22 -->
+      <class name="tutorialsninga.register.TC_RE_23">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninga.register.TC_RE_23@7817fd62]" started-at="2026-04-21T13:06:32 IST" name="setup" finished-at="2026-04-21T13:06:37 IST" duration-ms="5010" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyAllRegisterLink()[pri:0, instance:tutorialsninga.register.TC_RE_23@7817fd62]" started-at="2026-04-21T13:06:37 IST" name="verifyAllRegisterLink" finished-at="2026-04-21T13:06:44 IST" duration-ms="6339" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAllRegisterLink -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninga.register.TC_RE_23@7817fd62]" started-at="2026-04-21T13:06:44 IST" name="teardown" finished-at="2026-04-21T13:06:44 IST" duration-ms="215" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tutorialsninga.register.TC_RE_23 -->
+      <class name="tutorialsninga.register.TC_RE_01">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninga.register.TC_RE_01@6150c3ec]" started-at="2026-04-21T12:59:34 IST" name="setup" finished-at="2026-04-21T12:59:44 IST" duration-ms="9968" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyRegisterWithMandatoryFields()[pri:0, instance:tutorialsninga.register.TC_RE_01@6150c3ec]" started-at="2026-04-21T12:59:44 IST" name="verifyRegisterWithMandatoryFields" finished-at="2026-04-21T12:59:49 IST" duration-ms="5266" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegisterWithMandatoryFields -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninga.register.TC_RE_01@6150c3ec]" started-at="2026-04-21T12:59:49 IST" name="teardown" finished-at="2026-04-21T12:59:49 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tutorialsninga.register.TC_RE_01 -->
+      <class name="tutorialsninga.register.TC_RE_24">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninga.register.TC_RE_24@8297b3a]" started-at="2026-04-21T13:06:44 IST" name="setup" finished-at="2026-04-21T13:06:49 IST" duration-ms="4960" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyConfirmPass()[pri:0, instance:tutorialsninga.register.TC_RE_24@8297b3a]" started-at="2026-04-21T13:06:49 IST" name="verifyConfirmPass" finished-at="2026-04-21T13:06:51 IST" duration-ms="2536" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyConfirmPass -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninga.register.TC_RE_24@8297b3a]" started-at="2026-04-21T13:06:51 IST" name="teardown" finished-at="2026-04-21T13:06:52 IST" duration-ms="252" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tutorialsninga.register.TC_RE_24 -->
+      <class name="tutorialsninga.register.TC_RE_02">
+        <test-method signature="verifyConfirationMail()[pri:0, instance:tutorialsninga.register.TC_RE_02@55fe41ea]" started-at="2026-04-21T12:59:49 IST" name="verifyConfirationMail" finished-at="2026-04-21T13:00:40 IST" duration-ms="50771" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyConfirationMail -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninga.register.TC_RE_02@55fe41ea]" started-at="2026-04-21T13:00:40 IST" name="teardown" finished-at="2026-04-21T13:00:40 IST" duration-ms="235" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tutorialsninga.register.TC_RE_02 -->
+      <class name="tutorialsninga.register.TC_RE_07">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninga.register.TC_RE_07@24269709]" started-at="2026-04-21T13:01:26 IST" name="setup" finished-at="2026-04-21T13:01:32 IST" duration-ms="6033" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="regierWithAllPossibleWays()[pri:0, instance:tutorialsninga.register.TC_RE_07@24269709]" started-at="2026-04-21T13:01:32 IST" name="regierWithAllPossibleWays" finished-at="2026-04-21T13:01:35 IST" duration-ms="2622" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- regierWithAllPossibleWays -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninga.register.TC_RE_07@24269709]" started-at="2026-04-21T13:01:35 IST" name="teardown" finished-at="2026-04-21T13:01:35 IST" duration-ms="314" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tutorialsninga.register.TC_RE_07 -->
+      <class name="tutorialsninga.register.TC_RE_08">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninga.register.TC_RE_08@2aceadd4]" started-at="2026-04-21T13:01:35 IST" name="setup" finished-at="2026-04-21T13:01:41 IST" duration-ms="5485" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyInalidRegisterPasswordEroor()[pri:0, instance:tutorialsninga.register.TC_RE_08@2aceadd4]" started-at="2026-04-21T13:01:41 IST" name="verifyInalidRegisterPasswordEroor" finished-at="2026-04-21T13:01:43 IST" duration-ms="2282" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyInalidRegisterPasswordEroor -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninga.register.TC_RE_08@2aceadd4]" started-at="2026-04-21T13:01:43 IST" name="teardown" finished-at="2026-04-21T13:01:43 IST" duration-ms="280" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tutorialsninga.register.TC_RE_08 -->
+      <class name="tutorialsninga.register.TC_RE_09">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninga.register.TC_RE_09@24aed80c]" started-at="2026-04-21T13:01:43 IST" name="setup" finished-at="2026-04-21T13:01:48 IST" duration-ms="4830" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="registeWithSameEmail()[pri:0, instance:tutorialsninga.register.TC_RE_09@24aed80c]" started-at="2026-04-21T13:01:48 IST" name="registeWithSameEmail" finished-at="2026-04-21T13:01:51 IST" duration-ms="2640" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registeWithSameEmail -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninga.register.TC_RE_09@24aed80c]" started-at="2026-04-21T13:01:51 IST" name="teardown" finished-at="2026-04-21T13:01:51 IST" duration-ms="699" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tutorialsninga.register.TC_RE_09 -->
+      <class name="tutorialsninga.register.TC_RE_20">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninga.register.TC_RE_20@61322f9d]" started-at="2026-04-21T13:06:12 IST" name="setup" finished-at="2026-04-21T13:06:17 IST" duration-ms="5373" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyPolicyCheckBox()[pri:0, instance:tutorialsninga.register.TC_RE_20@61322f9d]" started-at="2026-04-21T13:06:17 IST" name="verifyPolicyCheckBox" finished-at="2026-04-21T13:06:17 IST" duration-ms="105" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPolicyCheckBox -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninga.register.TC_RE_20@61322f9d]" started-at="2026-04-21T13:06:17 IST" name="teardown" finished-at="2026-04-21T13:06:18 IST" duration-ms="619" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tutorialsninga.register.TC_RE_20 -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

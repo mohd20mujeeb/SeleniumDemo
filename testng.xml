@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite >
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>c
+      <class name="tutorialsninga.register.TC_RE_01"/>
+      <class name="tutorialsninga.register.TC_RE_02"/>
+      <class name="tutorialsninga.register.TC_RE_03"/>
+      <class name="tutorialsninga.register.TC_RE_04"/>
+      <class name="tutorialsninga.register.TC_RE_05"/>
+      <class name="tutorialsninga.register.TC_RE_06"/>
+      <class name="tutorialsninga.register.TC_RE_07"/>
+      <class name="tutorialsninga.register.TC_RE_08"/>
+      <class name="tutorialsninga.register.TC_RE_09"/>
+      <class name="tutorialsninga.register.TC_RE_10"/>
+      <class name="tutorialsninga.register.TC_RE_11"/>
+      <class name="tutorialsninga.register.TC_RE_12"/>
+      <class name="tutorialsninga.register.TC_RE_13"/>
+      <class name="tutorialsninga.register.TC_RE_14"/>
+      <class name="tutorialsninga.register.TC_RE_15"/>
+      <class name="tutorialsninga.register.TC_RE_16"/>
+      <class name="tutorialsninga.register.TC_RE_17"/>
+      <class name="tutorialsninga.register.TC_RE_18"/>
+      <class name="tutorialsninga.register.TC_RE_19"/>
+      <class name="tutorialsninga.register.TC_RE_20"/>
+      <class name="tutorialsninga.register.TC_RE_21"/>
+      <class name="tutorialsninga.register.TC_RE_22"/>
+      <class name="tutorialsninga.register.TC_RE_23"/>
+      <class name="tutorialsninga.register.TC_RE_24"/>
+      <class name="tutorialsninga.register.TC_RE_25"/>
+      <class name="tutorialsninga.register.TC_RE_26"/>
+      <class name="tutorialsninga.register.TC_RE_27"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
