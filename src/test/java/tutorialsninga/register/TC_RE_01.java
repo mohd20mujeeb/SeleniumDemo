@@ -1,6 +1,7 @@
 package tutorialsninga.register;
 
 import java.util.Date;
+import java.util.Properties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,15 +11,18 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import base.Base;
+import utils.CommonUtils;
 
 public class TC_RE_01 extends Base {
 
 	WebDriver driver;
+	Properties prop;
 
 	@BeforeMethod
 	public void setup() {
 
 		driver = openBrowserAndAppliation();
+		prop=CommonUtils.loadProperties();
 		driver.findElement(By.xpath("//span[.='My Account']")).click();
 		driver.findElement(By.linkText("Register")).click();
 	}
@@ -33,12 +37,12 @@ public class TC_RE_01 extends Base {
 	@Test
 	public void verifyRegisterWithMandatoryFields() {
 
-		driver.findElement(By.id("input-firstname")).sendKeys("Mohd");
-		driver.findElement(By.id("input-lastname")).sendKeys("Mujeeb");
+		driver.findElement(By.id("input-firstname")).sendKeys(prop.getProperty("firstName"));
+		driver.findElement(By.id("input-lastname")).sendKeys(prop.getProperty("lastName"));
 		driver.findElement(By.id("input-email")).sendKeys(generateEmale());
-		driver.findElement(By.id("input-telephone")).sendKeys("8858476236");
-		driver.findElement(By.id("input-password")).sendKeys("Mujeeb@123");
-		driver.findElement(By.id("input-confirm")).sendKeys("Mujeeb@123");
+		driver.findElement(By.id("input-telephone")).sendKeys(prop.getProperty("telephone"));
+		driver.findElement(By.id("input-password")).sendKeys(prop.getProperty("validPassword"));
+		driver.findElement(By.id("input-confirm")).sendKeys(prop.getProperty("validPassword"));
 		driver.findElement(By.name("agree")).click();
 		driver.findElement(By.xpath("//input[@value='Continue']")).click();
 		Assert.assertTrue(driver.findElement(By.linkText("Logout")).isDisplayed());

@@ -1,5 +1,7 @@
 package tutorialsninga.register;
 
+import java.util.Properties;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
@@ -12,6 +14,7 @@ import utils.CommonUtils;
 
 public class TC_RE_19 extends Base{
 	WebDriver driver;
+	Properties prop;
 
 	@AfterMethod
 	public void teardown() {
@@ -22,8 +25,8 @@ public class TC_RE_19 extends Base{
 
 	@BeforeMethod
 	public void setup() {
-
-		driver	=openBrowserAndAppliation();
+        prop = CommonUtils.loadProperties();
+        driver	=openBrowserAndAppliation();
 		driver.findElement(By.xpath("//span[.='My Account']")).click();
 		driver.findElement(By.linkText("Register")).click();
 	}
@@ -32,16 +35,16 @@ public class TC_RE_19 extends Base{
 	public void verifyTextfieldSpaceTriming() {
 		
         SoftAssert softAssert= new SoftAssert();		
-		String enteredFirstName = "      Mohd      ";
+		String enteredFirstName = "      "+prop.getProperty("firstName")+"      ";
 		driver.findElement(By.id("input-firstname")).sendKeys(enteredFirstName);
-		String enteredLastName = "      Mujeeb     ";
+		String enteredLastName = "      "+ prop.getProperty("lastName")+"     ";
 		driver.findElement(By.id("input-lastname")).sendKeys(enteredLastName);
 		String enteredEmail = "       " + CommonUtils.generateEmale() + "        ";
 		driver.findElement(By.id("input-email")).sendKeys(enteredEmail);
-		String enteredTelephone = "    8858476236    ";
+		String enteredTelephone = "    "+ prop.getProperty("telephone")+"    ";
 		driver.findElement(By.id("input-telephone")).sendKeys(enteredTelephone);
-		driver.findElement(By.id("input-password")).sendKeys("Mujeeb@123");
-		driver.findElement(By.id("input-confirm")).sendKeys("Mujeeb@123");
+		driver.findElement(By.id("input-password")).sendKeys(prop.getProperty("validPassword"));
+		driver.findElement(By.id("input-confirm")).sendKeys(prop.getProperty("validPassword"));
 		driver.findElement(By.name("agree")).click();
 		driver.findElement(By.xpath("//input[@value='Continue']")).click();
 		driver.findElement(By.linkText("Continue")).click();

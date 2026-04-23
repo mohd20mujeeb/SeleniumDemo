@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 10 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 11 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">31 methods, 10 failed,   21 passed</span>
+                    <span class="method-stats">31 methods, 11 failed,   20 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -101,6 +101,11 @@
                       <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
                     </span>
                     <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="tutorialsninga.register.TC_RE_09" class="method navigator-link" hash-for-method="registeWithSameEmail">registeWithSameEmail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="tutorialsninga.register.TC_RE_26" class="method navigator-link" hash-for-method="varifyRegisterPageUI">varifyRegisterPageUI</a> <!-- method navigator-link -->
@@ -118,7 +123,7 @@
                       <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tutorialsninga.register.TC_RE_17" class="method navigator-link" hash-for-method="verifyPasswordFollowingStandard(abcd123$)">verifyPasswordFollowingStandard(abcd123$)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="tutorialsninga.register.TC_RE_17" class="method navigator-link" hash-for-method="verifyPasswordFollowingStandard(abcd12345)">verifyPasswordFollowingStandard(abcd12345)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -128,7 +133,7 @@
                       <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tutorialsninga.register.TC_RE_17" class="method navigator-link" hash-for-method="verifyPasswordFollowingStandard(abcd12345)">verifyPasswordFollowingStandard(abcd12345)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="tutorialsninga.register.TC_RE_17" class="method navigator-link" hash-for-method="verifyPasswordFollowingStandard(abcd123$)">verifyPasswordFollowingStandard(abcd123$)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -163,11 +168,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="tutorialsninga.register.TC_RE_07" class="method navigator-link" hash-for-method="regierWithAllPossibleWays">regierWithAllPossibleWays</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tutorialsninga.register.TC_RE_09" class="method navigator-link" hash-for-method="registeWithSameEmail">registeWithSameEmail</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -232,12 +232,12 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tutorialsninga.register.TC_RE_20" class="method navigator-link" hash-for-method="verifyPolicyCheckBox">verifyPolicyCheckBox</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="tutorialsninga.register.TC_RE_21" class="method navigator-link" hash-for-method="verifyPolicyCheckBox">verifyPolicyCheckBox</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tutorialsninga.register.TC_RE_21" class="method navigator-link" hash-for-method="verifyPolicyCheckBox">verifyPolicyCheckBox</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="tutorialsninga.register.TC_RE_20" class="method navigator-link" hash-for-method="verifyPolicyCheckBox">verifyPolicyCheckBox</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -280,6 +280,45 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
+              <span class="class-name">tutorialsninga.register.TC_RE_09</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="registeWithSameEmail">
+                  </a> <!-- registeWithSameEmail -->
+                  <span class="method-name">registeWithSameEmail</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[.=&apos;Warning: E-Mail Address is already registered!&apos;]&quot;}
+  (Session info: chrome=147.0.7727.102)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ee5d4b2b5092818d64f1357cdc677072, findElement {using=xpath, value=//div[.=&apos;Warning: E-Mail Address is already registered!&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.102, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51147}, goog:processID: 26448, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51147/devtoo..., se:cdpVersion: 147.0.7727.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ee5d4b2b5092818d64f1357cdc677072
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:166)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
+	at tutorialsninga.register.TC_RE_09.registeWithSameEmail(TC_RE_09.java:50)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
               <span class="class-name">tutorialsninga.register.TC_RE_19</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -291,8 +330,8 @@
                   <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
 	expected [Mohd] but found [      Mohd      ],
 	expected [Mujeeb] but found [      Mujeeb     ],
-	expected [8858476236] but found [    8858476236    ]
-	at tutorialsninga.register.TC_RE_19.verifyTextfieldSpaceTriming(TC_RE_19.java:53)
+	expected [8858476232] but found [    8858476232    ]
+	at tutorialsninga.register.TC_RE_19.verifyTextfieldSpaceTriming(TC_RE_19.java:56)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 29 stack frames
 </div> <!-- stack-trace -->
@@ -308,19 +347,19 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyPasswordFollowingStandard(abcd123$)">
-                  </a> <!-- verifyPasswordFollowingStandard(abcd123$) -->
+                  <a name="verifyPasswordFollowingStandard(abcd12345)">
+                  </a> <!-- verifyPasswordFollowingStandard(abcd12345) -->
                   <span class="method-name">verifyPasswordFollowingStandard</span>
-                  <span class="parameters">(abcd123$)</span>
+                  <span class="parameters">(abcd12345)</span>
                   <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[.=&apos;Password must be between 4 and 20 characters!&apos;]&quot;}
-  (Session info: chrome=147.0.7727.56)
+  (Session info: chrome=147.0.7727.102)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
 Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [533596b1f7d67ab6bb6a2f4cab71f8ae, findElement {value=//div[.=&apos;Password must be between 4 and 20 characters!&apos;], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59807}, goog:processID: 24792, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59807/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 533596b1f7d67ab6bb6a2f4cab71f8ae
+Command: [68024bf1f8e3af082387dbdb2308f5e4, findElement {using=xpath, value=//div[.=&apos;Password must be between 4 and 20 characters!&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.102, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57328}, goog:processID: 18004, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57328/devtoo..., se:cdpVersion: 147.0.7727.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 68024bf1f8e3af082387dbdb2308f5e4
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -345,14 +384,14 @@ Session ID: 533596b1f7d67ab6bb6a2f4cab71f8ae
                   <span class="method-name">verifyPasswordFollowingStandard</span>
                   <span class="parameters">(abcdefghi)</span>
                   <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[.=&apos;Password must be between 4 and 20 characters!&apos;]&quot;}
-  (Session info: chrome=147.0.7727.56)
+  (Session info: chrome=147.0.7727.102)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
 Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ce8b5fc9b11634446ee9d4076822673a, findElement {value=//div[.=&apos;Password must be between 4 and 20 characters!&apos;], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61013}, goog:processID: 15692, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61013/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ce8b5fc9b11634446ee9d4076822673a
+Command: [155dc57817e459a5b7cc4f8ba26ebfd8, findElement {using=xpath, value=//div[.=&apos;Password must be between 4 and 20 characters!&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.102, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65422}, goog:processID: 23780, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65422/devtoo..., se:cdpVersion: 147.0.7727.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 155dc57817e459a5b7cc4f8ba26ebfd8
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -372,19 +411,19 @@ Session ID: ce8b5fc9b11634446ee9d4076822673a
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyPasswordFollowingStandard(abcd12345)">
-                  </a> <!-- verifyPasswordFollowingStandard(abcd12345) -->
+                  <a name="verifyPasswordFollowingStandard(abcd123$)">
+                  </a> <!-- verifyPasswordFollowingStandard(abcd123$) -->
                   <span class="method-name">verifyPasswordFollowingStandard</span>
-                  <span class="parameters">(abcd12345)</span>
+                  <span class="parameters">(abcd123$)</span>
                   <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[.=&apos;Password must be between 4 and 20 characters!&apos;]&quot;}
-  (Session info: chrome=147.0.7727.56)
+  (Session info: chrome=147.0.7727.102)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
 Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [1d2182d0db3bf6b21f268ac7d0c7e3f4, findElement {value=//div[.=&apos;Password must be between 4 and 20 characters!&apos;], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59255}, goog:processID: 20684, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59255/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 1d2182d0db3bf6b21f268ac7d0c7e3f4
+Command: [2b720cf99aecc3385c7ff144b47e1e59, findElement {using=xpath, value=//div[.=&apos;Password must be between 4 and 20 characters!&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.102, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63566}, goog:processID: 20952, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:63566/devtoo..., se:cdpVersion: 147.0.7727.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2b720cf99aecc3385c7ff144b47e1e59
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -409,14 +448,14 @@ Session ID: 1d2182d0db3bf6b21f268ac7d0c7e3f4
                   <span class="method-name">verifyPasswordFollowingStandard</span>
                   <span class="parameters">(ABCDE456#)</span>
                   <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[.=&apos;Password must be between 4 and 20 characters!&apos;]&quot;}
-  (Session info: chrome=147.0.7727.56)
+  (Session info: chrome=147.0.7727.102)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
 Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [da50dbe90fd93a96366de46bf0c604b5, findElement {value=//div[.=&apos;Password must be between 4 and 20 characters!&apos;], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59413}, goog:processID: 16184, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59413/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: da50dbe90fd93a96366de46bf0c604b5
+Command: [d76fde3b9961034fb05d567c67085c8d, findElement {using=xpath, value=//div[.=&apos;Password must be between 4 and 20 characters!&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.102, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58175}, goog:processID: 26664, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58175/devtoo..., se:cdpVersion: 147.0.7727.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d76fde3b9961034fb05d567c67085c8d
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -441,14 +480,14 @@ Session ID: da50dbe90fd93a96366de46bf0c604b5
                   <span class="method-name">verifyPasswordFollowingStandard</span>
                   <span class="parameters">(12345)</span>
                   <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[.=&apos;Password must be between 4 and 20 characters!&apos;]&quot;}
-  (Session info: chrome=147.0.7727.56)
+  (Session info: chrome=147.0.7727.102)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
 Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f77794d17d1b7b6ec6ba3dcd8f1f59d6, findElement {value=//div[.=&apos;Password must be between 4 and 20 characters!&apos;], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64534}, goog:processID: 7556, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64534/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f77794d17d1b7b6ec6ba3dcd8f1f59d6
+Command: [f133750a911e27789a5d2720e5c50c78, findElement {using=xpath, value=//div[.=&apos;Password must be between 4 and 20 characters!&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.102, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49968}, goog:processID: 25124, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49968/devtoo..., se:cdpVersion: 147.0.7727.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: f133750a911e27789a5d2720e5c50c78
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -480,13 +519,13 @@ Session ID: f77794d17d1b7b6ec6ba3dcd8f1f59d6
                   </a> <!-- verifyDataTestingOfRegisteringAccount -->
                   <span class="method-name">verifyDataTestingOfRegisteringAccount</span>
                   <div class="stack-trace">org.openqa.selenium.WebDriverException: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: chrome=147.0.7727.56)
+  (Session info: chrome=147.0.7727.102)
 Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [b092b1fb195a8637db449400deca7337, get {url=http://localhost/opencart}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62171}, goog:processID: 21668, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62171/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b092b1fb195a8637db449400deca7337
+Command: [6a8e9b9171315f4bad6bd31687148d2a, get {url=http://localhost/opencart}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.102, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60098}, goog:processID: 10228, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60098/devtoo..., se:cdpVersion: 147.0.7727.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6a8e9b9171315f4bad6bd31687148d2a
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -495,7 +534,7 @@ Session ID: b092b1fb195a8637db449400deca7337
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
 	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:372)
-	at tutorialsninga.register.TC_RE_15.verifyDataTestingOfRegisteringAccount(TC_RE_15.java:128)
+	at tutorialsninga.register.TC_RE_15.verifyDataTestingOfRegisteringAccount(TC_RE_15.java:138)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 27 stack frames
 </div> <!-- stack-trace -->
@@ -515,14 +554,14 @@ Session ID: b092b1fb195a8637db449400deca7337
                   </a> <!-- varifyRegisterWithInvalidTelephone -->
                   <span class="method-name">varifyRegisterWithInvalidTelephone</span>
                   <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[.=&apos;Invalid Telephone Number&apos;]&quot;}
-  (Session info: chrome=147.0.7727.56)
+  (Session info: chrome=147.0.7727.102)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
 Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [01af0975b604fd9e25831012a8653b6b, findElement {value=//div[.=&apos;Invalid Telephone Number&apos;], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52735}, goog:processID: 21976, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52735/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 01af0975b604fd9e25831012a8653b6b
+Command: [dfe1a260d8d37197dd2588ae089ef89f, findElement {using=xpath, value=//div[.=&apos;Invalid Telephone Number&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.102, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56308}, goog:processID: 13960, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56308/devtoo..., se:cdpVersion: 147.0.7727.102, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: dfe1a260d8d37197dd2588ae089ef89f
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -534,45 +573,7 @@ Session ID: 01af0975b604fd9e25831012a8653b6b
 	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:427)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:421)
-	at tutorialsninga.register.TC_RE_11.varifyRegisterWithInvalidTelephone(TC_RE_11.java:43)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">tutorialsninga.register.TC_RE_18</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyRegisteringAccountFieldsHeightWidthAligment">
-                  </a> <!-- verifyRegisteringAccountFieldsHeightWidthAligment -->
-                  <span class="method-name">verifyRegisteringAccountFieldsHeightWidthAligment</span>
-                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=147.0.7727.56)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
-Build info: version: &apos;4.41.0&apos;, revision: &apos;9fc754f&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.12&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [7b9067d87faa41f6a0cee5f826d41726, getElementText {id=f.DC7E8BF6A45771A13754AD888671F938.d.D9B2F9C7E5F22534E2B1855AB59F4CE6.e.281}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.56, chrome: {chromedriverVersion: 147.0.7727.57 (b4f28b5637d0..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64216}, goog:processID: 10684, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64216/devtoo..., se:cdpVersion: 147.0.7727.56, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (7b9067d87faa41f6a0cee5f826d41726)] -&gt; xpath: //input[@id=&apos;input-lastname&apos;]/following-sibling::div]
-Session ID: 7b9067d87faa41f6a0cee5f826d41726
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:223)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:191)
-	at tutorialsninga.register.TC_RE_18.verifyRegisteringAccountFieldsHeightWidthAligment(TC_RE_18.java:135)
+	at tutorialsninga.register.TC_RE_11.varifyRegisterWithInvalidTelephone(TC_RE_11.java:46)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 27 stack frames
 </div> <!-- stack-trace -->
@@ -600,21 +601,26 @@ Session ID: 7b9067d87faa41f6a0cee5f826d41726
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-passed">
+          <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tutorialsninga.register.TC_RE_05</span>
+              <img src="failed.png"/>
+              <span class="class-name">tutorialsninga.register.TC_RE_18</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyRegisterNewsletter">
-                  </a> <!-- verifyRegisterNewsletter -->
-                  <span class="method-name">verifyRegisterNewsletter</span>
+                  <a name="verifyRegisteringAccountFieldsHeightWidthAligment">
+                  </a> <!-- verifyRegisteringAccountFieldsHeightWidthAligment -->
+                  <span class="method-name">verifyRegisteringAccountFieldsHeightWidthAligment</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [false] but found [true]
+	at tutorialsninga.register.TC_RE_18.verifyRegisteringAccountFieldsHeightWidthAligment(TC_RE_18.java:67)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -633,6 +639,21 @@ Session ID: 7b9067d87faa41f6a0cee5f826d41726
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
+              <span class="class-name">tutorialsninga.register.TC_RE_05</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyRegisterNewsletter">
+                  </a> <!-- verifyRegisterNewsletter -->
+                  <span class="method-name">verifyRegisterNewsletter</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
               <span class="class-name">tutorialsninga.register.TC_RE_12</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -641,21 +662,6 @@ Session ID: 7b9067d87faa41f6a0cee5f826d41726
                   <a name="registerUsingKeyboard">
                   </a> <!-- registerUsingKeyboard -->
                   <span class="method-name">registerUsingKeyboard</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">tutorialsninga.register.TC_RE_09</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="registeWithSameEmail">
-                  </a> <!-- registeWithSameEmail -->
-                  <span class="method-name">registeWithSameEmail</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -723,21 +729,6 @@ Session ID: 7b9067d87faa41f6a0cee5f826d41726
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">tutorialsninga.register.TC_RE_16</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="varifyRegisterByEnteringSpacce">
-                  </a> <!-- varifyRegisterByEnteringSpacce -->
-                  <span class="method-name">varifyRegisterByEnteringSpacce</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
               <span class="class-name">tutorialsninga.register.TC_RE_04</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -746,6 +737,21 @@ Session ID: 7b9067d87faa41f6a0cee5f826d41726
                   <a name="verifyErrormessageAllFields">
                   </a> <!-- verifyErrormessageAllFields -->
                   <span class="method-name">verifyErrormessageAllFields</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tutorialsninga.register.TC_RE_16</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="varifyRegisterByEnteringSpacce">
+                  </a> <!-- varifyRegisterByEnteringSpacce -->
+                  <span class="method-name">varifyRegisterByEnteringSpacce</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -858,21 +864,6 @@ Session ID: 7b9067d87faa41f6a0cee5f826d41726
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">tutorialsninga.register.TC_RE_24</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyConfirmPass">
-                  </a> <!-- verifyConfirmPass -->
-                  <span class="method-name">verifyConfirmPass</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
               <span class="class-name">tutorialsninga.register.TC_RE_01</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -881,6 +872,21 @@ Session ID: 7b9067d87faa41f6a0cee5f826d41726
                   <a name="verifyRegisterWithMandatoryFields">
                   </a> <!-- verifyRegisterWithMandatoryFields -->
                   <span class="method-name">verifyRegisterWithMandatoryFields</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">tutorialsninga.register.TC_RE_24</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyConfirmPass">
+                  </a> <!-- verifyConfirmPass -->
+                  <span class="method-name">verifyConfirmPass</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -997,132 +1003,132 @@ data.addRows(31);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyConfirationMail')
 data.setCell(0, 2, 'tutorialsninga.register.TC_RE_02')
-data.setCell(0, 3, 50771);
+data.setCell(0, 3, 18966);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyRegisteringAccountFieldsHeightWidthAligment')
-data.setCell(1, 2, 'tutorialsninga.register.TC_RE_18')
-data.setCell(1, 3, 24904);
+data.setCell(1, 1, 'registerUsingKeyboard')
+data.setCell(1, 2, 'tutorialsninga.register.TC_RE_12')
+data.setCell(1, 3, 13997);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'varifyRegisterWithInvalidEmail')
-data.setCell(2, 2, 'tutorialsninga.register.TC_RE_10')
-data.setCell(2, 3, 24853);
+data.setCell(2, 1, 'varifyRegisterWithInvalidTelephone')
+data.setCell(2, 2, 'tutorialsninga.register.TC_RE_11')
+data.setCell(2, 3, 7278);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'registerUsingKeyboard')
-data.setCell(3, 2, 'tutorialsninga.register.TC_RE_12')
-data.setCell(3, 3, 15451);
+data.setCell(3, 1, 'varifyRegisterWithInvalidEmail')
+data.setCell(3, 2, 'tutorialsninga.register.TC_RE_10')
+data.setCell(3, 3, 7176);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'verifyPasswordFollowingStandard')
 data.setCell(4, 2, 'tutorialsninga.register.TC_RE_17')
-data.setCell(4, 3, 10176);
+data.setCell(4, 3, 6431);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'varifyRegisterWithInvalidTelephone')
-data.setCell(5, 2, 'tutorialsninga.register.TC_RE_11')
-data.setCell(5, 3, 9727);
+data.setCell(5, 1, 'verifyPasswordFollowingStandard')
+data.setCell(5, 2, 'tutorialsninga.register.TC_RE_17')
+data.setCell(5, 3, 6318);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'verifyPasswordFollowingStandard')
 data.setCell(6, 2, 'tutorialsninga.register.TC_RE_17')
-data.setCell(6, 3, 8742);
+data.setCell(6, 3, 6204);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'verifyPasswordFollowingStandard')
 data.setCell(7, 2, 'tutorialsninga.register.TC_RE_17')
-data.setCell(7, 3, 8709);
+data.setCell(7, 3, 6200);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'verifyDataTestingOfRegisteringAccount')
-data.setCell(8, 2, 'tutorialsninga.register.TC_RE_15')
-data.setCell(8, 3, 8634);
+data.setCell(8, 1, 'verifyPasswordFollowingStandard')
+data.setCell(8, 2, 'tutorialsninga.register.TC_RE_17')
+data.setCell(8, 3, 5529);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'verifyPasswordFollowingStandard')
-data.setCell(9, 2, 'tutorialsninga.register.TC_RE_17')
-data.setCell(9, 3, 8237);
+data.setCell(9, 1, 'registeWithSameEmail')
+data.setCell(9, 2, 'tutorialsninga.register.TC_RE_09')
+data.setCell(9, 3, 5422);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'verifyPasswordFollowingStandard')
-data.setCell(10, 2, 'tutorialsninga.register.TC_RE_17')
-data.setCell(10, 3, 7337);
+data.setCell(10, 1, 'verifyAllRegisterLink')
+data.setCell(10, 2, 'tutorialsninga.register.TC_RE_23')
+data.setCell(10, 3, 3633);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'verifyRegisterNewsletter')
-data.setCell(11, 2, 'tutorialsninga.register.TC_RE_05')
-data.setCell(11, 3, 6659);
+data.setCell(11, 1, 'verifyDataTestingOfRegisteringAccount')
+data.setCell(11, 2, 'tutorialsninga.register.TC_RE_15')
+data.setCell(11, 3, 3331);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'verifyAllRegisterLink')
-data.setCell(12, 2, 'tutorialsninga.register.TC_RE_23')
-data.setCell(12, 3, 6339);
+data.setCell(12, 1, 'verifyRegisterNewsletterNo')
+data.setCell(12, 2, 'tutorialsninga.register.TC_RE_06')
+data.setCell(12, 3, 2159);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'varifyRegisterByEnteringSpacce')
-data.setCell(13, 2, 'tutorialsninga.register.TC_RE_16')
-data.setCell(13, 3, 5453);
+data.setCell(13, 1, 'verifyRegisterWithMandatoryFields')
+data.setCell(13, 2, 'tutorialsninga.register.TC_RE_01')
+data.setCell(13, 3, 1769);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'verifyRegisterWithMandatoryFields')
-data.setCell(14, 2, 'tutorialsninga.register.TC_RE_01')
-data.setCell(14, 3, 5266);
+data.setCell(14, 1, 'verifyTextfieldSpaceTriming')
+data.setCell(14, 2, 'tutorialsninga.register.TC_RE_19')
+data.setCell(14, 3, 1631);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'verifyTextfieldSpaceTriming')
-data.setCell(15, 2, 'tutorialsninga.register.TC_RE_19')
-data.setCell(15, 3, 4781);
+data.setCell(15, 1, 'verifyRegisterNewsletter')
+data.setCell(15, 2, 'tutorialsninga.register.TC_RE_05')
+data.setCell(15, 3, 1628);
 data.setCell(16, 0, 16)
 data.setCell(16, 1, 'verifyRegisterAllFields')
 data.setCell(16, 2, 'tutorialsninga.register.TC_RE_03')
-data.setCell(16, 3, 4557);
+data.setCell(16, 3, 1586);
 data.setCell(17, 0, 17)
-data.setCell(17, 1, 'verifyRegisterNewsletterNo')
-data.setCell(17, 2, 'tutorialsninga.register.TC_RE_06')
-data.setCell(17, 3, 3395);
+data.setCell(17, 1, 'varifyRegisterPageUI')
+data.setCell(17, 2, 'tutorialsninga.register.TC_RE_27')
+data.setCell(17, 3, 1168);
 data.setCell(18, 0, 18)
-data.setCell(18, 1, 'registeWithSameEmail')
-data.setCell(18, 2, 'tutorialsninga.register.TC_RE_09')
-data.setCell(18, 3, 2640);
+data.setCell(18, 1, 'verifyRegisteringAccountFieldsHeightWidthAligment')
+data.setCell(18, 2, 'tutorialsninga.register.TC_RE_18')
+data.setCell(18, 3, 1129);
 data.setCell(19, 0, 19)
 data.setCell(19, 1, 'regierWithAllPossibleWays')
 data.setCell(19, 2, 'tutorialsninga.register.TC_RE_07')
-data.setCell(19, 3, 2622);
+data.setCell(19, 3, 1011);
 data.setCell(20, 0, 20)
-data.setCell(20, 1, 'verifyPolicyCheckBox')
-data.setCell(20, 2, 'tutorialsninga.register.TC_RE_21')
-data.setCell(20, 3, 2597);
+data.setCell(20, 1, 'verifyConfirmPass')
+data.setCell(20, 2, 'tutorialsninga.register.TC_RE_24')
+data.setCell(20, 3, 978);
 data.setCell(21, 0, 21)
-data.setCell(21, 1, 'verifyConfirmPass')
-data.setCell(21, 2, 'tutorialsninga.register.TC_RE_24')
-data.setCell(21, 3, 2536);
+data.setCell(21, 1, 'varifyRegisterByEnteringSpacce')
+data.setCell(21, 2, 'tutorialsninga.register.TC_RE_16')
+data.setCell(21, 3, 868);
 data.setCell(22, 0, 22)
-data.setCell(22, 1, 'varifyRegisterPageUI')
-data.setCell(22, 2, 'tutorialsninga.register.TC_RE_27')
-data.setCell(22, 3, 2379);
+data.setCell(22, 1, 'verifyInalidRegisterPasswordEroor')
+data.setCell(22, 2, 'tutorialsninga.register.TC_RE_08')
+data.setCell(22, 3, 861);
 data.setCell(23, 0, 23)
-data.setCell(23, 1, 'verifyInalidRegisterPasswordEroor')
-data.setCell(23, 2, 'tutorialsninga.register.TC_RE_08')
-data.setCell(23, 3, 2282);
+data.setCell(23, 1, 'verifyPolicyCheckBox')
+data.setCell(23, 2, 'tutorialsninga.register.TC_RE_21')
+data.setCell(23, 3, 787);
 data.setCell(24, 0, 24)
-data.setCell(24, 1, 'varifyRegisterPageUI')
-data.setCell(24, 2, 'tutorialsninga.register.TC_RE_26')
-data.setCell(24, 3, 1642);
+data.setCell(24, 1, 'verifyErrormessageAllFields')
+data.setCell(24, 2, 'tutorialsninga.register.TC_RE_04')
+data.setCell(24, 3, 555);
 data.setCell(25, 0, 25)
-data.setCell(25, 1, 'verifyMandatoryFieldsSymbolAndColor')
-data.setCell(25, 2, 'tutorialsninga.register.TC_RE_14')
-data.setCell(25, 3, 1428);
+data.setCell(25, 1, 'varifyRegisterPageUI')
+data.setCell(25, 2, 'tutorialsninga.register.TC_RE_26')
+data.setCell(25, 3, 403);
 data.setCell(26, 0, 26)
-data.setCell(26, 1, 'verifyErrormessageAllFields')
-data.setCell(26, 2, 'tutorialsninga.register.TC_RE_04')
-data.setCell(26, 3, 1257);
+data.setCell(26, 1, 'verifyMandatoryFieldsSymbolAndColor')
+data.setCell(26, 2, 'tutorialsninga.register.TC_RE_14')
+data.setCell(26, 3, 269);
 data.setCell(27, 0, 27)
 data.setCell(27, 1, 'verifyPlaceholder')
 data.setCell(27, 2, 'tutorialsninga.register.TC_RE_13')
-data.setCell(27, 3, 687);
+data.setCell(27, 3, 80);
 data.setCell(28, 0, 28)
-data.setCell(28, 1, 'verifyPassword')
-data.setCell(28, 2, 'tutorialsninga.register.TC_RE_22')
-data.setCell(28, 3, 116);
+data.setCell(28, 1, 'verifyRegisterPage')
+data.setCell(28, 2, 'tutorialsninga.register.TC_RE_25')
+data.setCell(28, 3, 64);
 data.setCell(29, 0, 29)
-data.setCell(29, 1, 'verifyPolicyCheckBox')
-data.setCell(29, 2, 'tutorialsninga.register.TC_RE_20')
-data.setCell(29, 3, 105);
+data.setCell(29, 1, 'verifyPassword')
+data.setCell(29, 2, 'tutorialsninga.register.TC_RE_22')
+data.setCell(29, 3, 30);
 data.setCell(30, 0, 30)
-data.setCell(30, 1, 'verifyRegisterPage')
-data.setCell(30, 2, 'tutorialsninga.register.TC_RE_25')
-data.setCell(30, 3, 98);
+data.setCell(30, 1, 'verifyPolicyCheckBox')
+data.setCell(30, 2, 'tutorialsninga.register.TC_RE_20')
+data.setCell(30, 3, 24);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 minutes</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -1155,204 +1161,206 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyRegisterWithMandatoryFields</span>
-                <span class="method-start">9988 ms</span>
+                <span class="method-start">4317 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">15260 ms</span>
+                <span class="method-start">6088 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tutorialsninga.register.TC_RE_02</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">verifyConfirationMail</span>
-                <span class="method-start">15266 ms</span>
+                <span class="method-start">6091 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">66037 ms</span>
+                <span class="method-start">25066 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tutorialsninga.register.TC_RE_03</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">66273 ms</span>
+                <span class="method-start">25278 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyRegisterAllFields</span>
-                <span class="method-start">73640 ms</span>
+                <span class="method-start">27997 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">78203 ms</span>
+                <span class="method-start">29584 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tutorialsninga.register.TC_RE_04</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">78537 ms</span>
+                <span class="method-start">29765 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyErrormessageAllFields</span>
-                <span class="method-start">84139 ms</span>
+                <span class="method-start">31724 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">85396 ms</span>
+                <span class="method-start">32279 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tutorialsninga.register.TC_RE_05</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">85711 ms</span>
+                <span class="method-start">32420 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyRegisterNewsletter</span>
-                <span class="method-start">93169 ms</span>
+                <span class="method-start">34015 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">99833 ms</span>
+                <span class="method-start">35645 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tutorialsninga.register.TC_RE_06</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">100387 ms</span>
+                <span class="method-start">35801 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyRegisterNewsletterNo</span>
-                <span class="method-start">108603 ms</span>
+                <span class="method-start">37735 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">111998 ms</span>
+                <span class="method-start">39896 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tutorialsninga.register.TC_RE_07</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">112192 ms</span>
+                <span class="method-start">40037 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">regierWithAllPossibleWays</span>
-                <span class="method-start">118225 ms</span>
+                <span class="method-start">42112 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">120847 ms</span>
+                <span class="method-start">43124 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tutorialsninga.register.TC_RE_08</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">121162 ms</span>
+                <span class="method-start">43285 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyInalidRegisterPasswordEroor</span>
-                <span class="method-start">126649 ms</span>
+                <span class="method-start">44938 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">128931 ms</span>
+                <span class="method-start">45800 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tutorialsninga.register.TC_RE_09</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">129212 ms</span>
+                <span class="method-start">45956 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">registeWithSameEmail</span>
-                <span class="method-start">134042 ms</span>
+                <span class="method-start">48642 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">136697 ms</span>
+                <span class="method-start">54064 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tutorialsninga.register.TC_RE_10</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">137399 ms</span>
+                <span class="method-start">54254 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">varifyRegisterWithInvalidEmail</span>
-                <span class="method-start">145926 ms</span>
+                <span class="method-start">56154 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">170785 ms</span>
+                <span class="method-start">63330 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tutorialsninga.register.TC_RE_11</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">173734 ms</span>
+                <span class="method-start">63503 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">varifyRegisterWithInvalidTelephone</span>
-                <span class="method-start">183354 ms</span>
+                <span class="method-start">65197 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">193093 ms</span>
+                <span class="method-start">72475 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tutorialsninga.register.TC_RE_12</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">193570 ms</span>
+                <span class="method-start">72650 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">registerUsingKeyboard</span>
-                <span class="method-start">201140 ms</span>
+                <span class="method-start">74617 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">216594 ms</span>
+                <span class="method-start">88614 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tutorialsninga.register.TC_RE_13</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">216966 ms</span>
+                <span class="method-start">88803 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyPlaceholder</span>
-                <span class="method-start">224348 ms</span>
+                <span class="method-start">91567 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">225052 ms</span>
+                <span class="method-start">91647 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tutorialsninga.register.TC_RE_14</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">225698 ms</span>
+                <span class="method-start">91839 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyMandatoryFieldsSymbolAndColor</span>
-                <span class="method-start">233394 ms</span>
+                <span class="method-start">94504 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">234826 ms</span>
+                <span class="method-start">94773 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
@@ -1361,251 +1369,255 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">verifyDataTestingOfRegisteringAccount</span>
-                <span class="method-start">234830 ms</span>
+                <span class="method-start">94774 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown</span>
+                <span class="method-start">98105 ms</span>
+              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tutorialsninga.register.TC_RE_16</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">243473 ms</span>
+                <span class="method-start">98264 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">varifyRegisterByEnteringSpacce</span>
-                <span class="method-start">250790 ms</span>
+                <span class="method-start">101011 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">256248 ms</span>
+                <span class="method-start">101879 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tutorialsninga.register.TC_RE_17</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">258016 ms</span>
+                <span class="method-start">102040 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">verifyPasswordFollowingStandard(12345)</span>
-                <span class="method-start">269634 ms</span>
+                <span class="method-start">104792 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">279826 ms</span>
+                <span class="method-start">110336 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">280496 ms</span>
+                <span class="method-start">110492 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">verifyPasswordFollowingStandard(abcdefghi)</span>
-                <span class="method-start">296587 ms</span>
+                <span class="method-start">112366 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">305338 ms</span>
+                <span class="method-start">118797 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">305560 ms</span>
+                <span class="method-start">118980 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">verifyPasswordFollowingStandard(abcd12345)</span>
-                <span class="method-start">317991 ms</span>
+                <span class="method-start">122147 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">326711 ms</span>
+                <span class="method-start">128357 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">326930 ms</span>
+                <span class="method-start">128528 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">verifyPasswordFollowingStandard(ABCDE456#)</span>
-                <span class="method-start">332794 ms</span>
+                <span class="method-start">131418 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">341031 ms</span>
+                <span class="method-start">137748 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">341277 ms</span>
+                <span class="method-start">137904 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">verifyPasswordFollowingStandard(abcd123$)</span>
-                <span class="method-start">347164 ms</span>
+                <span class="method-start">140134 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">354503 ms</span>
+                <span class="method-start">146345 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tutorialsninga.register.TC_RE_18</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">354763 ms</span>
+                <span class="method-start">146503 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">verifyRegisteringAccountFieldsHeightWidthAligment</span>
-                <span class="method-start">362021 ms</span>
+                <span class="method-start">149934 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">386926 ms</span>
+                <span class="method-start">151064 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tutorialsninga.register.TC_RE_19</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">387152 ms</span>
+                <span class="method-start">151207 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">verifyTextfieldSpaceTriming</span>
-                <span class="method-start">392788 ms</span>
+                <span class="method-start">153086 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">397570 ms</span>
+                <span class="method-start">154718 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tutorialsninga.register.TC_RE_20</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">397752 ms</span>
+                <span class="method-start">154862 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyPolicyCheckBox</span>
-                <span class="method-start">403126 ms</span>
+                <span class="method-start">156504 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">403231 ms</span>
+                <span class="method-start">156529 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tutorialsninga.register.TC_RE_21</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">403852 ms</span>
+                <span class="method-start">156667 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyPolicyCheckBox</span>
-                <span class="method-start">409093 ms</span>
+                <span class="method-start">159301 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">411695 ms</span>
+                <span class="method-start">160088 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tutorialsninga.register.TC_RE_22</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">412123 ms</span>
+                <span class="method-start">160233 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyPassword</span>
-                <span class="method-start">417895 ms</span>
+                <span class="method-start">162833 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">418011 ms</span>
+                <span class="method-start">162864 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tutorialsninga.register.TC_RE_23</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">418397 ms</span>
+                <span class="method-start">163024 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyAllRegisterLink</span>
-                <span class="method-start">423408 ms</span>
+                <span class="method-start">164618 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">429747 ms</span>
+                <span class="method-start">168252 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tutorialsninga.register.TC_RE_24</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">429962 ms</span>
+                <span class="method-start">168447 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyConfirmPass</span>
-                <span class="method-start">434922 ms</span>
+                <span class="method-start">171655 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">437459 ms</span>
+                <span class="method-start">172635 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tutorialsninga.register.TC_RE_25</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">437712 ms</span>
+                <span class="method-start">172767 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyRegisterPage</span>
-                <span class="method-start">443262 ms</span>
+                <span class="method-start">174369 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">443360 ms</span>
+                <span class="method-start">174433 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tutorialsninga.register.TC_RE_26</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">443599 ms</span>
+                <span class="method-start">174576 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">varifyRegisterPageUI</span>
-                <span class="method-start">448855 ms</span>
+                <span class="method-start">176192 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">450501 ms</span>
+                <span class="method-start">176595 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tutorialsninga.register.TC_RE_27</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
-                <span class="method-start">450871 ms</span>
+                <span class="method-start">176768 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">varifyRegisterPageUI</span>
-                <span class="method-start">456174 ms</span>
+                <span class="method-start">178873 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">458554 ms</span>
+                <span class="method-start">180041 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

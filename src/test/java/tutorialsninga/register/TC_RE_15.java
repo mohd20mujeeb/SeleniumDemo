@@ -107,9 +107,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 public class TC_RE_15 {
+	
+	WebDriver driver ;
+	
+	@AfterMethod
+	public void teardown() {
+		if (driver != null) {
+			driver.quit();
+		}
+	}
 
     String url = "jdbc:mysql://localhost:3306/opencart_db";
     String username = "root";
@@ -122,7 +132,7 @@ public class TC_RE_15 {
     @Test
     public void verifyDataTestingOfRegisteringAccount() throws InterruptedException {
 
-        WebDriver driver = new ChromeDriver();
+        driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.manage().window().maximize();
         driver.get("http://localhost/opencart");

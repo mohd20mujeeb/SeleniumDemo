@@ -3,6 +3,13 @@
 <suite name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="tutorialsninga.register.TC_RE_09">
+        <methods>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="registeWithSameEmail"/>
+        </methods>
+      </class> <!-- tutorialsninga.register.TC_RE_09 -->
       <class name="tutorialsninga.register.TC_RE_19">
         <methods>
           <include name="teardown"/>
@@ -20,6 +27,7 @@
       <class name="tutorialsninga.register.TC_RE_15">
         <methods>
           <include name="verifyDataTestingOfRegisteringAccount"/>
+          <include name="teardown"/>
         </methods>
       </class> <!-- tutorialsninga.register.TC_RE_15 -->
       <class name="tutorialsninga.register.TC_RE_11">
