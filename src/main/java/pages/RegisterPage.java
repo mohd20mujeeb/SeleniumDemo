@@ -13,7 +13,7 @@ public class RegisterPage {
 	  this.driver=driver;
 	  PageFactory.initElements(driver, this);
   }
- @FindBy(id="input-firstName")
+ @FindBy(id="input-firstname")
  private WebElement firstNameField;
   
  @FindBy(id="input-lastname")
@@ -31,8 +31,8 @@ public class RegisterPage {
  @FindBy(id="input-confirm")
  private WebElement confirmField;
  
- @FindBy(id="agree")
- private WebElement privacyFieldField;
+ @FindBy(name ="agree")
+ private WebElement privacyField;
  
  @FindBy(xpath ="//input[@value='Continue']")
  private WebElement continueButton;
@@ -63,11 +63,12 @@ public class RegisterPage {
   }
   public void seletPrivacyPoliy() 
   {
-	  confirmField.click();
+	  privacyField.click();
   }
-  public void clickOnContinueButton() 
+  public AccountSuccessPage clickOnContinueButton() 
   {
 	  continueButton.click();
+	  return new AccountSuccessPage(driver);
   }
 
 

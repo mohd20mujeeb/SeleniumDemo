@@ -1,56 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]">
-  <test thread-count="5" name="Test(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tutorialsninga.register.TC_RE_09">
+      <class name="tutorialsninga.register.TC_RE_01">
         <methods>
           <include name="teardown"/>
-          <include name="setup"/>
-          <include name="registeWithSameEmail"/>
-        </methods>
-      </class> <!-- tutorialsninga.register.TC_RE_09 -->
-      <class name="tutorialsninga.register.TC_RE_19">
-        <methods>
-          <include name="teardown"/>
-          <include name="setup"/>
-          <include name="verifyTextfieldSpaceTriming"/>
-        </methods>
-      </class> <!-- tutorialsninga.register.TC_RE_19 -->
-      <class name="tutorialsninga.register.TC_RE_17">
-        <methods>
-          <include name="verifyPasswordFollowingStandard" invocation-numbers="0 1 2 3 4"/>
-          <include name="setup"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- tutorialsninga.register.TC_RE_17 -->
-      <class name="tutorialsninga.register.TC_RE_15">
-        <methods>
-          <include name="verifyDataTestingOfRegisteringAccount"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- tutorialsninga.register.TC_RE_15 -->
-      <class name="tutorialsninga.register.TC_RE_11">
-        <methods>
-          <include name="teardown"/>
-          <include name="varifyRegisterWithInvalidTelephone"/>
+          <include name="verifyRegisterWithMandatoryFields"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- tutorialsninga.register.TC_RE_11 -->
-      <class name="tutorialsninga.register.TC_RE_26">
-        <methods>
-          <include name="varifyRegisterPageUI"/>
-          <include name="setup"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- tutorialsninga.register.TC_RE_26 -->
-      <class name="tutorialsninga.register.TC_RE_18">
-        <methods>
-          <include name="verifyRegisteringAccountFieldsHeightWidthAligment"/>
-          <include name="setup"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- tutorialsninga.register.TC_RE_18 -->
+      </class> <!-- tutorialsninga.register.TC_RE_01 -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
