@@ -1,5 +1,4 @@
 package tutorialsninga.register;
-import java.util.Date;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
@@ -36,7 +35,7 @@ public class TC_RE_05 extends Base{
 	public void verifyRegisterNewsletter() {
 		driver.findElement(By.id("input-firstname")).sendKeys(prop.getProperty("firstName"));
 		driver.findElement(By.id("input-lastname")).sendKeys(prop.getProperty("lastName"));
-		driver.findElement(By.id("input-email")).sendKeys(generateEmale());
+		driver.findElement(By.id("input-email")).sendKeys(CommonUtils.generateEmale());
 		driver.findElement(By.id("input-telephone")).sendKeys(prop.getProperty("telephone"));
 		driver.findElement(By.id("input-password")).sendKeys(prop.getProperty("validPassword"));
 		driver.findElement(By.id("input-confirm")).sendKeys(prop.getProperty("validPassword"));
@@ -49,7 +48,5 @@ public class TC_RE_05 extends Base{
 		Assert.assertTrue(driver.findElement(By.xpath("//input[@value='1']")).isSelected());
 	}
 
-	public String generateEmale() {
-		return new Date().toString().replaceAll(" ", "").replaceAll("\\:", "") + "@gmail.com";
-	}
+	
 }
