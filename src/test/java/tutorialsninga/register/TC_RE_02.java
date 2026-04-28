@@ -40,7 +40,7 @@ public class TC_RE_02 {
 		driver.findElement(By.id("ap_email_login")).sendKeys(email);
 		driver.findElement(By.xpath("//input[@type='submit']")).click();
 		driver.findElement(By.id("auth-fpp-link-bottom")).click();
-		driver.findElement(By.id("continue")).click();
+		//driver.findElement(By.id("continue")).click();
 		String host = "imap.gmail.com";
 		String username = email;
 		String appPassword = appPass;
