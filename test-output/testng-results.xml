@@ -1,25 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-25T12:56:44 IST" name="Default suite" finished-at="2026-04-25T12:56:49 IST" duration-ms="5163">
+  <suite started-at="2026-04-29T11:26:14 IST" name="Default suite" finished-at="2026-04-29T11:26:26 IST" duration-ms="12310">
     <groups>
     </groups>
-    <test started-at="2026-04-25T12:56:44 IST" name="Default test" finished-at="2026-04-25T12:56:49 IST" duration-ms="5163">
-      <class name="tutorialsninga.register.TC_RE_01">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninga.register.TC_RE_01@1aafa419]" started-at="2026-04-25T12:56:44 IST" name="setup" finished-at="2026-04-25T12:56:47 IST" duration-ms="2412" status="PASS">
+    <test started-at="2026-04-29T11:26:14 IST" name="Default test" finished-at="2026-04-29T11:26:26 IST" duration-ms="12310">
+      <class name="tutorialsninga.tests.Register">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninga.tests.Register@47eaca72]" started-at="2026-04-29T11:26:14 IST" name="setup" finished-at="2026-04-29T11:26:18 IST" duration-ms="4305" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyRegisterWithMandatoryFields()[pri:0, instance:tutorialsninga.register.TC_RE_01@1aafa419]" started-at="2026-04-25T12:56:47 IST" name="verifyRegisterWithMandatoryFields" finished-at="2026-04-25T12:56:49 IST" duration-ms="2524" status="PASS">
+        <test-method signature="verifyRegisterWithMandatoryFields()[pri:1, instance:tutorialsninga.tests.Register@47eaca72]" started-at="2026-04-29T11:26:18 IST" name="verifyRegisterWithMandatoryFields" finished-at="2026-04-29T11:26:20 IST" duration-ms="2297" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRegisterWithMandatoryFields -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninga.register.TC_RE_01@1aafa419]" started-at="2026-04-25T12:56:49 IST" name="teardown" finished-at="2026-04-25T12:56:49 IST" duration-ms="177" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninga.tests.Register@47eaca72]" started-at="2026-04-29T11:26:20 IST" name="teardown" finished-at="2026-04-29T11:26:20 IST" duration-ms="173" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- tutorialsninga.register.TC_RE_01 -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tutorialsninga.tests.Register@47eaca72]" started-at="2026-04-29T11:26:20 IST" name="setup" finished-at="2026-04-29T11:26:24 IST" duration-ms="3386" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyRegisterAllFields()[pri:2, instance:tutorialsninga.tests.Register@47eaca72]" started-at="2026-04-29T11:26:24 IST" name="verifyRegisterAllFields" finished-at="2026-04-29T11:26:26 IST" duration-ms="1968" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegisterAllFields -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tutorialsninga.tests.Register@47eaca72]" started-at="2026-04-29T11:26:26 IST" name="teardown" finished-at="2026-04-29T11:26:26 IST" duration-ms="139" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- tutorialsninga.tests.Register -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
