@@ -12,6 +12,7 @@ import base.Base;
 import pages.AccountPage;
 import pages.AccountSuccessPage;
 import pages.LandingPage;
+import pages.NewsletterPage;
 import pages.RegisterPage;
 import utils.CommonUtils;
 
@@ -23,6 +24,7 @@ public class Register extends Base {
 	RegisterPage registerPage;
 	AccountSuccessPage accountSuccessPage;
 	AccountPage accountPage;
+	NewsletterPage newsletterPage;
 
 	@BeforeMethod
 	public void setup() {
@@ -49,7 +51,7 @@ public class Register extends Base {
 		registerPage.enterEmail(CommonUtils.generateEmale());
 		registerPage.enterTelephone(prop.getProperty("telephone"));
 		registerPage.enterPassword(prop.getProperty("validPassword"));
-		registerPage.confirmPassword(prop.getProperty("validPassword"));
+		registerPage.enterConfirmPassword(prop.getProperty("validPassword"));
 		registerPage.seletPrivacyPoliy();
 		accountSuccessPage = registerPage.clickOnContinueButton();
 		Assert.assertTrue(accountSuccessPage.isUserLoggedIn());
@@ -77,7 +79,7 @@ public class Register extends Base {
 		registerPage.enterEmail(CommonUtils.generateEmale());
 		registerPage.enterTelephone(prop.getProperty("telephone"));
 		registerPage.enterPassword(prop.getProperty("validPassword"));
-		registerPage.confirmPassword(prop.getProperty("validPassword"));
+		registerPage.enterConfirmPassword(prop.getProperty("validPassword"));
 		registerPage.selectYesNewsletterOption();
 		registerPage.seletPrivacyPoliy();
 		accountSuccessPage = registerPage.clickOnContinueButton();
@@ -97,6 +99,59 @@ public class Register extends Base {
 		Assert.assertTrue(actualProperDetails.contains(expectedProperDetailsFive));
 		accountPage = accountSuccessPage.clickOnContinueButton();
 		accountPage.didWeNavigateToAccountPage();
+
+	}
+	
+	@Test(priority = 3)
+	public void verifyErrormessageAllFields() {
+	    registerPage.clickOnContinueButton();
+		String expectedFirstNameWarning = "First Name must be between 1 and 32 characters!";
+		String expectedLastNameWarning = "Last Name must be between 1 and 32 characters!";
+		String expectedemailwarning = "E-Mail Address does not appear to be valid!";
+		String expectedTelephoneWarning = "Telephone must be between 3 and 32 characters!";
+		String expectedPasswordWarning = "Password must be between 4 and 20 characters!";
+		String expectedPrivacyPolicyWarning = "Warning: You must agree to the Privacy Policy!";
+		Assert.assertEquals(registerPage.getFirstNameWarning(),expectedFirstNameWarning);
+		Assert.assertEquals(registerPage.getLastNameWarning(),expectedLastNameWarning);
+		Assert.assertEquals(registerPage.getEmailWarning(),expectedemailwarning);
+		Assert.assertEquals(registerPage.getTelphoneWarning(),expectedTelephoneWarning);
+		Assert.assertEquals(registerPage.getPasswordWarning(),expectedPasswordWarning);
+		Assert.assertEquals(registerPage.getPolicyWarning(),expectedPrivacyPolicyWarning);
+
+	}
+	
+	@Test(priority = 4)
+	public void verifyRegisterNewsletter() {
+		registerPage.enterFirstName(prop.getProperty("firstName"));
+		registerPage.enterLastName(prop.getProperty("lastName"));
+		registerPage.enterEmail(CommonUtils.generateEmale());
+		registerPage.enterTelephone(prop.getProperty("telephone"));
+		registerPage.enterPassword(prop.getProperty("validPassword"));
+        registerPage.enterConfirmPassword(prop.getProperty("validPassword"));
+        registerPage.selectYesNewsletterOption();
+        registerPage.seletPrivacyPoliy();
+	    accountSuccessPage=registerPage.clickOnContinueButton();
+		accountPage=accountSuccessPage.clickOnContinueButton();
+		newsletterPage=accountPage.SelectSuscribeUnsuscribeNewsletterOption();
+		Assert.assertTrue(newsletterPage.getNewsLetterSuscription());
+		Assert.assertTrue(newsletterPage.isYesNewsletterOptionSelected());
+	}
+	
+	@Test(priority = 5)
+	public void verifyRegisterNewsletterNo() {
+		registerPage.enterFirstName(prop.getProperty("firstName"));
+		registerPage.enterLastName(prop.getProperty("lastName"));
+		registerPage.enterEmail(CommonUtils.generateEmale());
+		registerPage.enterTelephone(prop.getProperty("telephone"));
+		registerPage.enterPassword(prop.getProperty("validPassword"));
+        registerPage.enterConfirmPassword(prop.getProperty("validPassword"));
+	    registerPage.selectNoNewsletterOption();
+	    registerPage.seletPrivacyPoliy();
+	    accountSuccessPage=registerPage.clickOnContinueButton();
+		accountPage=accountSuccessPage.clickOnContinueButton();
+		newsletterPage=accountPage.SelectSuscribeUnsuscribeNewsletterOption();
+		Assert.assertTrue(newsletterPage.getNewsLetterSuscription());
+		Assert.assertTrue(newsletterPage.isNoNewsletterOptionSelected());
 
 	}
 

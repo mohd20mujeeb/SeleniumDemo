@@ -16,9 +16,16 @@ public class AccountPage {
    @FindBy(linkText = "Edit your account information")
    private WebElement editYourAccountInformationOption;
    
+   @FindBy(linkText = "Subscribe / unsubscribe to newsletter")
+   private WebElement suscribeUnsuscribeNewsLetterOption;
+   
    public boolean didWeNavigateToAccountPage() 
    {
 	   return editYourAccountInformationOption.isDisplayed();
    }
-   
+  
+   public NewsletterPage SelectSuscribeUnsuscribeNewsletterOption() {
+		   suscribeUnsuscribeNewsLetterOption.click();
+		   return new NewsletterPage(driver);
+		}
 }

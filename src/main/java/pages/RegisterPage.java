@@ -1,5 +1,6 @@
 package pages;
 
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -48,10 +49,19 @@ public class RegisterPage {
 
 	@FindBy(xpath = "//div[.='E-Mail Address does not appear to be valid!']")
 	private WebElement emailWarning;
-	
+
 	@FindBy(xpath = "//div[.='Telephone must be between 3 and 32 characters!']")
 	private WebElement telephoneWarning;
 
+	@FindBy(xpath = "//div[.='Password must be between 4 and 20 characters!']")
+	private WebElement passwordWarning;
+
+	@FindBy(xpath = "//div[.='Warning: You must agree to the Privacy Policy!']")
+	private WebElement policyWarning;
+    
+	@FindBy(xpath = "//input[@name='newsletter'][@value='0']")
+	private WebElement newsletterNo;
+	
 	public void enterFirstName(String firstNameText) {
 		firstNameField.sendKeys(firstNameText);
 	}
@@ -72,7 +82,7 @@ public class RegisterPage {
 		passwordField.sendKeys(passwordText);
 	}
 
-	public void confirmPassword(String confirmText) {
+	public void enterConfirmPassword(String confirmText) {
 		confirmField.sendKeys(confirmText);
 	}
 
@@ -92,6 +102,7 @@ public class RegisterPage {
 	public String getFirstNameWarning() {
 		return firstNameWarning.getText();
 	}
+
 	public String getLastNameWarning() {
 		return lastNameWarning.getText();
 	}
@@ -99,7 +110,20 @@ public class RegisterPage {
 	public String getEmailWarning() {
 		return emailWarning.getText();
 	}
- 	public String getTelphoneWarning() {
- 	    return telephoneWarning.getText(); 
- 	}
+
+	public String getTelphoneWarning() {
+		return telephoneWarning.getText();
+	}
+
+	public String getPasswordWarning() {
+		return passwordWarning.getText();
+	}
+
+	public String getPolicyWarning() {
+		return policyWarning.getText();
+	}
+	public void selectNoNewsletterOption() {
+		newsletterNo.click();
+	}
+
 }
