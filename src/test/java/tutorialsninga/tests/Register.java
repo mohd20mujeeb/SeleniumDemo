@@ -2,6 +2,7 @@ package tutorialsninga.tests;
 
 import java.util.Properties;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -152,6 +153,25 @@ public class Register extends Base {
 		newsletterPage=accountPage.SelectSuscribeUnsuscribeNewsletterOption();
 		Assert.assertTrue(newsletterPage.getNewsLetterSuscription());
 		Assert.assertTrue(newsletterPage.isNoNewsletterOptionSelected());
+
+	}
+	
+	@Test(priority = 6)
+	public void regierWithAllPossibleWays() {
+
+		Assert.assertTrue(registerPage.didWeNavigateToRegisterPage());
+
+		driver.findElement(By.xpath("//span[.='My Account']")).click();
+		driver.findElement(By.linkText("Login")).click();
+		driver.findElement(By.linkText("Continue")).click();
+		Assert.assertTrue(driver.findElement(By.linkText("Register")).isDisplayed());
+
+		driver.findElement(By.xpath("//span[.='My Account']")).click();
+		driver.findElement(By.linkText("Login")).click();
+		driver.findElement(By.linkText("Register")).click();
+		Assert.assertTrue(driver.findElement(By.linkText("Register")).isDisplayed());
+
+		
 
 	}
 
