@@ -1,6 +1,5 @@
 package pages;
 
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -58,10 +57,25 @@ public class RegisterPage {
 
 	@FindBy(xpath = "//div[.='Warning: You must agree to the Privacy Policy!']")
 	private WebElement policyWarning;
-    
+
 	@FindBy(xpath = "//input[@name='newsletter'][@value='0']")
 	private WebElement newsletterNo;
-	
+
+	@FindBy(linkText = "Register")
+	private WebElement registerBreadCrumb;
+
+	@FindBy(xpath = "//span[.='My Account']")
+	private WebElement myAccountDropMenu;
+
+	@FindBy(linkText = "Login")
+	private WebElement loginOption;
+
+	@FindBy(xpath = "//div[.='Password confirmation does not match password!']")
+	private WebElement confirmPasswordWarning;
+
+	@FindBy(xpath = "//div[.='Warning: E-Mail Address is already registered!']")
+	private WebElement existingEmailWarning;
+
 	public void enterFirstName(String firstNameText) {
 		firstNameField.sendKeys(firstNameText);
 	}
@@ -122,8 +136,36 @@ public class RegisterPage {
 	public String getPolicyWarning() {
 		return policyWarning.getText();
 	}
+
 	public void selectNoNewsletterOption() {
 		newsletterNo.click();
+	}
+
+	public boolean didWeNavigateToRegisterPage() {
+		return registerBreadCrumb.isDisplayed();
+	}
+
+	public void clickOnMyAccount() {
+		myAccountDropMenu.click();
+	}
+
+	public LoginPage selectLoginOption() {
+		loginOption.click();
+		return new LoginPage(driver);
+	}
+
+	public String getConfirmPasswordWarning() {
+		return confirmPasswordWarning.getText();
+	}
+
+	public String getExistingEmailWarning() {
+		return existingEmailWarning.getText();
+	}
+	public String getEmailValidationMsg() {
+		return emailField.getDomProperty("validationMessage");
+	}
+	public void clearEmailField() {
+		emailField.clear();
 	}
 
 }

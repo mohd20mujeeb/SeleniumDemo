@@ -6,8 +6,8 @@
       <class name="tutorialsninga.tests.Register">
         <methods>
           <include name="teardown"/>
-          <include name="verifyRegisterAllFields"/>
           <include name="setup"/>
+          <include name="varifyRegisterWithInvalidEmail"/>
         </methods>
       </class> <!-- tutorialsninga.tests.Register -->
     </classes>
