@@ -3,12 +3,17 @@ package tutorialsninga.tests;
 import static org.testng.Assert.assertEquals;
 
 import java.io.IOException;
+import java.time.Duration;
+import java.util.NoSuchElementException;
 import java.util.Properties;
-
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import base.Base;
@@ -254,4 +259,152 @@ public class Register extends Base {
 		Assert.assertEquals(registerPage.getEmailWarning(), errorMsg);
 
 	}
+
+	@Test(priority = 10)
+	public void varifyRegisterWithInvalidTelephone() {
+		registerPage.enterFirstName(prop.getProperty("firstName"));
+		registerPage.enterLastName(prop.getProperty("lastName"));
+		registerPage.enterEmail(CommonUtils.generateEmale());
+		registerPage.enterTelephone(prop.getProperty("invalidTelephone"));
+		registerPage.enterPassword(prop.getProperty("validPassword"));
+		registerPage.enterConfirmPassword(prop.getProperty("validPassword"));
+		registerPage.selectYesNewsletterOption();
+		registerPage.seletPrivacyPoliy();
+		registerPage.clickOnContinueButton();
+		String ExpectedErrorMessage = "Invalid Telephone Number";
+		boolean state = false;
+		try {
+			String actualWarningessage = registerPage.getTelphoneWarning();
+			if (actualWarningessage.equals(ExpectedErrorMessage)) {
+				state = true;
+			}
+		} catch (NoSuchElementException e) {
+			state = false;
+		}
+		Assert.assertTrue(state);
+
+	}
+
+	@Test(priority = 11)
+	public void registerUsingKeyboard() {
+		Actions act = new Actions(driver);
+		for (int i = 1; i <= 23; i++) {
+			act.sendKeys(Keys.TAB).perform();
+		}
+		act.sendKeys(prop.getProperty("firstName")).pause(Duration.ofSeconds(1)).sendKeys(Keys.TAB)
+				.pause(Duration.ofSeconds(1)).sendKeys(prop.getProperty("lastName")).sendKeys(Keys.TAB)
+				.pause(Duration.ofSeconds(1)).sendKeys(CommonUtils.generateEmale()).sendKeys(Keys.TAB)
+				.pause(Duration.ofSeconds(1)).sendKeys(prop.getProperty("telephone")).sendKeys(Keys.TAB)
+				.pause(Duration.ofSeconds(1)).sendKeys(prop.getProperty("validPassword")).sendKeys(Keys.TAB)
+				.pause(Duration.ofSeconds(1)).sendKeys(prop.getProperty("validPassword")).sendKeys(Keys.TAB)
+				.pause(Duration.ofSeconds(1)).sendKeys(Keys.ARROW_LEFT).pause(Duration.ofSeconds(1)).sendKeys(Keys.TAB)
+				.pause(Duration.ofSeconds(1)).sendKeys(Keys.TAB).pause(Duration.ofSeconds(1)).sendKeys(Keys.SPACE)
+				.pause(Duration.ofSeconds(1)).sendKeys(Keys.TAB).pause(Duration.ofSeconds(1)).sendKeys(Keys.ENTER)
+				.pause(Duration.ofSeconds(1)).build().perform();
+		accountSuccessPage = new AccountSuccessPage(driver);
+		Assert.assertTrue(accountSuccessPage.didWeNavigateToAccountSuccessPage());
+		Assert.assertTrue(accountSuccessPage.isUserLoggedIn());
+
+	}
+
+	@Test(priority = 12)
+	public void verifyPlaceholder() {
+
+		String expectedFN = "First Name";
+		String expectedLN = "Last Name";
+		String expectedEmail = "E-Mail";
+		String expectedTelephone = "Telephone";
+		String expectedPass = "Password";
+		String expectedConPass = "Password Confirm";
+
+		Assert.assertEquals(registerPage.getFirstNamePlaceholder(), expectedFN);
+		Assert.assertEquals(registerPage.getLastNamePlaceholder(), expectedLN);
+		Assert.assertEquals(registerPage.getEmailPlaceholder(), expectedEmail);
+		Assert.assertEquals(registerPage.getTelephonePlaceholder(), expectedTelephone);
+		Assert.assertEquals(registerPage.getPasswordPlaceholder(), expectedPass);
+		Assert.assertEquals(registerPage.getConfirmPasswordPlaceholder(), expectedConPass);
+	}
+
+	@Test(priority = 13)
+	public void verifyMandatoryFieldsSymbolAndColor() {
+		String expectedContent = "\"* \"";
+		String expectedColor = "rgb(255, 0, 0)";
+		Assert.assertEquals(registerPage.getFirstNameLabelContent(driver), expectedContent);
+		Assert.assertEquals(registerPage.getFirstNameColorContent(driver), expectedColor);
+
+		Assert.assertEquals(registerPage.getLastNameLabelContent(driver), expectedContent);
+		Assert.assertEquals(registerPage.getLastNameLabelColor(driver), expectedColor);
+
+		Assert.assertEquals(registerPage.getEmailNameLableContent(driver), expectedContent);
+		Assert.assertEquals(registerPage.getEmailNameLableColor(driver), expectedColor);
+
+		Assert.assertEquals(registerPage.getTelephoneLableContent(driver), expectedContent);
+		Assert.assertEquals(registerPage.getTelephoneLableColor(driver), expectedColor);
+
+		Assert.assertEquals(registerPage.getPassLableContent(driver), expectedContent);
+		Assert.assertEquals(registerPage.getPassLableColor(driver), expectedColor);
+
+		Assert.assertEquals(registerPage.getConpassLableContent(driver), expectedContent);
+		Assert.assertEquals(registerPage.getConpassLableColor(driver), expectedColor);
+
+	}
+
+	@Test(priority = 14)
+	public void varifyRegisterByEnteringSpacce() {
+
+		registerPage.enterFirstName(" ");
+		registerPage.enterLastName(" ");
+		registerPage.enterEmail(" ");
+		registerPage.enterTelephone(" ");
+		registerPage.enterPassword(" ");
+		registerPage.enterConfirmPassword(" ");
+		registerPage.selectYesNewsletterOption();
+		registerPage.seletPrivacyPoliy();
+		registerPage.clickOnContinueButton();
+
+		String expectedErrorFn = "First Name must be between 1 and 32 characters!";
+		String expectedErrorLn = "Last Name must be between 1 and 32 characters!";
+		String expectedErrorEmail = "E-Mail Address does not appear to be valid!";
+		String expectedErrorTelephone = "Telephone must be between 3 and 32 characters!";
+		String expectedErrorPass = "Password must be between 4 and 20 characters!";
+		Assert.assertEquals(registerPage.getFirstNameWarning(), expectedErrorFn);
+		Assert.assertEquals(registerPage.getLastNameWarning(), expectedErrorLn);
+		Assert.assertEquals(registerPage.getEmailWarning(), expectedErrorEmail);
+		Assert.assertEquals(registerPage.getTelphoneWarning(), expectedErrorTelephone);
+		Assert.assertEquals(registerPage.getPasswordWarning(), expectedErrorPass);
+
+	}
+
+	@Test(priority = 15, dataProvider = "passwordSupplier")
+	public void verifyPasswordFollowingStandard(String passwordText) {
+		registerPage.enterFirstName(prop.getProperty("firstName"));
+		registerPage.enterLastName(prop.getProperty("lastName"));
+		registerPage.enterEmail(CommonUtils.generateEmale());
+		registerPage.enterTelephone(prop.getProperty("invalidTelephone"));
+		registerPage.selectYesNewsletterOption();
+		registerPage.enterPassword(passwordText);
+		registerPage.enterConfirmPassword(passwordText);
+		registerPage.seletPrivacyPoliy();
+		registerPage.clickOnContinueButton();
+
+		String errormsg = "Password is not matching standard ";
+		boolean state = false;
+		try {
+			String actualWarningMsg = registerPage.getPasswordWarning();
+			if (actualWarningMsg.equals(errormsg)) {
+				state = true;
+			}
+		} catch (NoSuchElementException e) {
+			state = false;
+		}
+		Assert.assertTrue(state);
+
+	}
+
+	@DataProvider(name = "passwordSupplier")
+	public Object[][] datapass() {
+		Object[][] data = { { "12345" }, { "abcdefghi" }, { "abcd12345" }, { "ABCDE456#" }, { "abcd123$" } };
+		return data;
+	}
+
 }

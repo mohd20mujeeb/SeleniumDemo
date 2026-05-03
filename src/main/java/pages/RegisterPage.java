@@ -1,5 +1,8 @@
 package pages;
 
+import java.util.NoSuchElementException;
+
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -75,6 +78,24 @@ public class RegisterPage {
 
 	@FindBy(xpath = "//div[.='Warning: E-Mail Address is already registered!']")
 	private WebElement existingEmailWarning;
+
+	@FindBy(css = "label[for='input-firstname']")
+	private WebElement firstNameLable;
+
+	@FindBy(css = "label[for='input-lastname']")
+	private WebElement lastNameLable;
+
+	@FindBy(css = "label[for='input-email']")
+	private WebElement emailNameLable;
+
+	@FindBy(css = "label[for='input-telephone']")
+	private WebElement telephoneLable;
+
+	@FindBy(css = "label[for='input-password']")
+	private WebElement passLable;
+
+	@FindBy(css = "label[for='input-confirm']")
+	private WebElement conpassLable;
 
 	public void enterFirstName(String firstNameText) {
 		firstNameField.sendKeys(firstNameText);
@@ -161,11 +182,145 @@ public class RegisterPage {
 	public String getExistingEmailWarning() {
 		return existingEmailWarning.getText();
 	}
+
 	public String getEmailValidationMsg() {
 		return emailField.getDomProperty("validationMessage");
 	}
+
 	public void clearEmailField() {
 		emailField.clear();
 	}
 
+	public String getFirstNamePlaceholder() {
+		return firstNameField.getDomAttribute("placeholder");
+	}
+
+	public String getLastNamePlaceholder() {
+		return lastNameField.getDomAttribute("placeholder");
+	}
+
+	public String getEmailPlaceholder() {
+		return emailField.getDomAttribute("placeholder");
+	}
+
+	public String getTelephonePlaceholder() {
+		return telephoneField.getDomAttribute("placeholder");
+	}
+
+	public String getPasswordPlaceholder() {
+		return passwordField.getDomAttribute("placeholder");
+	}
+
+	public String getConfirmPasswordPlaceholder() {
+		return confirmField.getDomAttribute("placeholder");
+	}
+
+	public String getFirstNameLabelContent(WebDriver driver) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		String fnContent = (String) js.executeScript(
+				"return window.getComputedStyle(arguments[0], '::before').getPropertyValue('content');",
+				firstNameLable);
+		return fnContent;
+	}
+
+	public String getFirstNameColorContent(WebDriver driver) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		String fnColor = (String) js.executeScript(
+				"return window.getComputedStyle(arguments[0], '::before').getPropertyValue('color');", firstNameLable);
+		return fnColor;
+	}
+
+	public String getLastNameLabelContent(WebDriver driver) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		String lnContent = (String) js.executeScript(
+				"return window.getComputedStyle(arguments[0], '::before').getPropertyValue('content');", lastNameLable);
+		return lnContent;
+	}
+
+	public String getLastNameLabelColor(WebDriver driver) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		String lnColor = (String) js.executeScript(
+				"return window.getComputedStyle(arguments[0], '::before').getPropertyValue('color');", lastNameLable);
+		return lnColor;
+	}
+
+	public String getEmailNameLableContent(WebDriver driver) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		String emailContent = (String) js.executeScript(
+				"return window.getComputedStyle(arguments[0], '::before').getPropertyValue('content');",
+				emailNameLable);
+		return emailContent;
+	}
+
+	public String getEmailNameLableColor(WebDriver driver) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		String emailColor = (String) js.executeScript(
+				"return window.getComputedStyle(arguments[0], '::before').getPropertyValue('color');", emailNameLable);
+		return emailColor;
+	}
+
+	public String getTelephoneLableContent(WebDriver driver) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		String telephoneContent = (String) js.executeScript(
+				"return window.getComputedStyle(arguments[0], '::before').getPropertyValue('content');",
+				telephoneLable);
+		return telephoneContent;
+	}
+
+	public String getTelephoneLableColor(WebDriver driver) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		String telephoneColor = (String) js.executeScript(
+				"return window.getComputedStyle(arguments[0], '::before').getPropertyValue('color');", telephoneLable);
+		return telephoneColor;
+	}
+
+	public String getPassLableContent(WebDriver driver) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		String passContent = (String) js.executeScript(
+				"return window.getComputedStyle(arguments[0], '::before').getPropertyValue('content');", passLable);
+		return passContent;
+	}
+
+	public String getPassLableColor(WebDriver driver) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		String passColor = (String) js.executeScript(
+				"return window.getComputedStyle(arguments[0], '::before').getPropertyValue('color');", passLable);
+		return passColor;
+	}
+
+	public String getConpassLableContent(WebDriver driver) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		String conpassContent = (String) js.executeScript(
+				"return window.getComputedStyle(arguments[0], '::before').getPropertyValue('content');", conpassLable);
+		return conpassContent;
+	}
+
+	public String getConpassLableColor(WebDriver driver) {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		String conpassColor = (String) js.executeScript(
+				"return window.getComputedStyle(arguments[0], '::before').getPropertyValue('color');", conpassLable);
+		return conpassColor;
+	}
+
+	public String getFirstNameHeight() {
+		return firstNameField.getCssValue("height");
+	}
+
+	public String getFirstNameWidth() {
+		return firstNameField.getCssValue("width");
+	}
+
+	public void clearFirstNameField() {
+		firstNameField.clear();
+	}
+
+	public boolean isFirstNameWarningDisplayed() {
+		boolean status = false;
+		try {
+			status = firstNameWarning.isDisplayed();
+		} catch (NoSuchElementException e) {
+			status = false;
+		}
+		return status;
+	}
 }

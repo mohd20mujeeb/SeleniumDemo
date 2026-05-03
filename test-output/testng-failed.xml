@@ -6,8 +6,8 @@
       <class name="tutorialsninga.tests.Register">
         <methods>
           <include name="teardown"/>
+          <include name="verifyPasswordFollowingStandard" invocation-numbers="0 1 2 3 4"/>
           <include name="setup"/>
-          <include name="varifyRegisterWithInvalidEmail"/>
         </methods>
       </class> <!-- tutorialsninga.tests.Register -->
     </classes>
