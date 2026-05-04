@@ -323,4 +323,25 @@ public class RegisterPage {
 		}
 		return status;
 	}
+	public String getLastNameHeight() {
+		return lastNameField.getCssValue("height");
+	}
+
+	public String getLastNameWidth() {
+		return lastNameField.getCssValue("width");
+	}
+
+	public void clearLastNameField() {
+		lastNameField.clear();
+	}
+
+	public boolean isLastNameWarningDisplayed() {
+		boolean status = false;
+		try {
+			status = lastNameWarning.isDisplayed();
+		} catch (NoSuchElementException e) {
+			status = false;
+		}
+		return status;
+	}
 }
