@@ -344,4 +344,80 @@ public class RegisterPage {
 		}
 		return status;
 	}
+	public String getEmaleHeight() {
+		return emailField.getCssValue("height");
+	}
+
+	public String getEmaleWidth() {
+		return emailField.getCssValue("width");
+	}
+
+	public boolean isEmaleWarningDisplayed() {
+		boolean status = false;
+		try {
+			status = emailWarning.isDisplayed();
+		} catch (NoSuchElementException e) {
+			status = false;
+		}
+		return status;
+	}
+	public String getTelephoneHeight() {
+		return telephoneField.getCssValue("height");
+	}
+
+	public String getTelephoneWidth() {
+		return telephoneField.getCssValue("width");
+	}
+
+	public void clearTelephoneField() {
+		telephoneField.clear();
+	}
+
+	public boolean isTelephoneWarningDisplayed() {
+		boolean status = false;
+		try {
+			status = telephoneWarning.isDisplayed();
+		} catch (NoSuchElementException e) {
+			status = false;
+		}
+		return status;
+	}
+	public String getPasswordHeight() {
+		return passwordField.getCssValue("height");
+	}
+
+	public String getPasswordWidth() {
+		return passwordField.getCssValue("width");
+	}
+
+	public void clearPasswordField() {
+		passwordField.clear();
+	}
+
+	public boolean isPasswordWarningDisplayed() {
+		boolean status = false;
+		try {
+			status = passwordWarning.isDisplayed();
+		} catch (NoSuchElementException e) {
+			status = false;
+		}
+		return status;
+	}
+	public String getConPasswordHeight() {
+		return confirmField.getCssValue("height");
+	}
+
+	public String getConPasswordWidth() {
+		return confirmField.getCssValue("width");
+	}
+	public boolean isPrivacyPolicySelected() {
+		return privacyField.isSelected();
+	}
+	public String getPasswordType() {
+		return passwordField.getAttribute("type");
+	}
+	public String getConfirmPasswordType() {
+		return confirmField.getAttribute("type");
+	}
+	
 }

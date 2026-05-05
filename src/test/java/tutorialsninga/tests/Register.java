@@ -8,12 +8,10 @@ import java.time.Duration;
 import java.util.NoSuchElementException;
 import java.util.Properties;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.io.FileHandler;
 import org.testng.Assert;
@@ -21,10 +19,12 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import base.Base;
 import pages.AccountPage;
 import pages.AccountSuccessPage;
+import pages.EditAccountInformationPage;
 import pages.LandingPage;
 import pages.LoginPage;
 import pages.NewsletterPage;
@@ -41,6 +41,7 @@ public class Register extends Base {
 	AccountPage accountPage;
 	NewsletterPage newsletterPage;
 	LoginPage loginPage;
+	EditAccountInformationPage editAccountInforationPage;
 
 	@BeforeMethod
 	public void setup() {
@@ -458,7 +459,7 @@ public class Register extends Base {
 		registerPage.clickOnContinueButton();
 		Assert.assertEquals(registerPage.getFirstNameWarning(), expectedWarning);
 
-		// ---------------------
+		// -----------------------------------------------------------------------------------------------//
 
 		registerPage = new RegisterPage(driver);
 		String actualLastNameFieldHeight = registerPage.getLastNameHeight();
@@ -470,9 +471,7 @@ public class Register extends Base {
 		registerPage.clearLastNameField();
 		registerPage.enterLastName("");
 		registerPage.clickOnContinueButton();
-		Assert.assertEquals(
-				registerPage.getLastNameWarning(),
-				expectedWarning);
+		Assert.assertEquals(registerPage.getLastNameWarning(), expectedWarning);
 
 		registerPage = new RegisterPage(driver);
 		registerPage.clearLastNameField();
@@ -480,281 +479,169 @@ public class Register extends Base {
 		registerPage.clickOnContinueButton();
 		Assert.assertFalse(registerPage.isLastNameWarningDisplayed());
 
-		continueButton = driver.findElement(By.xpath("//input[@value='Continue']"));
-		lastNameField = driver.findElement(By.id("input-lastname"));
-		lastNameField.clear();
-		lastNameField.sendKeys("ab");
-		continueButton.click();
-		try {
-			Assert.assertFalse(
-					driver.findElement(By.xpath("//input[@id='input-lastname']/following-sibling::div")).isDisplayed());
-		} catch (NoSuchElementException e) {
-			Assert.assertTrue(true);
-		}
+		registerPage = new RegisterPage(driver);
+		registerPage.clearLastNameField();
+		registerPage.enterLastName("ab");
+		registerPage.clickOnContinueButton();
+		Assert.assertFalse(registerPage.isLastNameWarningDisplayed());
 
-		continueButton = driver.findElement(By.xpath("//input[@value='Continue']"));
-		lastNameField = driver.findElement(By.id("input-lastname"));
-		lastNameField.clear();
-		lastNameField.sendKeys("abcdefghijklmnopq");
-		continueButton.click();
-		try {
-			Assert.assertFalse(
-					driver.findElement(By.xpath("//input[@id='input-lastname']/following-sibling::div")).isDisplayed());
-		} catch (NoSuchElementException e) {
-			Assert.assertTrue(true);
-		}
+		registerPage = new RegisterPage(driver);
+		registerPage.clearLastNameField();
+		registerPage.enterLastName("abcdefghijklmnopq");
+		registerPage.clickOnContinueButton();
+		Assert.assertFalse(registerPage.isLastNameWarningDisplayed());
 
-		continueButton = driver.findElement(By.xpath("//input[@value='Continue']"));
-		lastNameField = driver.findElement(By.id("input-lastname"));
-		lastNameField.clear();
-		lastNameField.sendKeys("abcdefghijklmnopabcdefghijklmnop");
-		continueButton.click();
-		try {
-			Assert.assertFalse(
-					driver.findElement(By.xpath("//input[@id='input-lastname']/following-sibling::div")).isDisplayed());
-		} catch (NoSuchElementException e) {
-			Assert.assertTrue(true);
-		}
+		registerPage = new RegisterPage(driver);
+		registerPage.clearLastNameField();
+		registerPage.enterLastName("abcdefghijklmnopabcdefghijklmnop");
+		registerPage.clickOnContinueButton();
+		Assert.assertFalse(registerPage.isLastNameWarningDisplayed());
 
-		continueButton = driver.findElement(By.xpath("//input[@value='Continue']"));
-		lastNameField = driver.findElement(By.id("input-lastname"));
-		lastNameField.clear();
-		lastNameField.sendKeys("abcdefghijklmnopabcdefghijklmnopq");
-		continueButton.click();
-		Assert.assertEquals(
-				driver.findElement(By.xpath("//input[@id='input-lastname']/following-sibling::div")).getText(),
-				expectedWarning);
+		registerPage = new RegisterPage(driver);
+		registerPage.clearLastNameField();
+		registerPage.enterLastName("abcdefghijklmnopabcdefghijklmnopq");
+		registerPage.clickOnContinueButton();
+		Assert.assertFalse(registerPage.isLastNameWarningDisplayed());
 
-		WebElement emailField = driver.findElement(By.id("input-email"));
+		// --------------------------------------------------------------------------//
 
-		String actualEmailFieldHeight = emailField.getCssValue("height");
-		String actualEmailFieldWidth = emailField.getCssValue("width");
-
+		registerPage = new RegisterPage(driver);
+		String actualEmailFieldHeight = registerPage.getEmaleHeight();
+		String actualEmailFieldWidth = registerPage.getEmaleWidth();
 		Assert.assertEquals(actualEmailFieldHeight, expectedHeight);
 		Assert.assertEquals(actualEmailFieldWidth, expectedWidth);
 
-		continueButton = driver.findElement(By.xpath("//input[@value='Continue']"));
-		emailField.clear();
-		emailField.sendKeys("abcdefghijklmnopabcdefghijklmnopqabcdefghijklmnopabcdefghijklmno@gmail.com");
-		continueButton.click();
-		try {
-			Assert.assertFalse(
-					driver.findElement(By.xpath("//input[@id='input-email']/following-sibling::div")).isDisplayed());
-		} catch (NoSuchElementException e) {
-			Assert.assertTrue(true);
-		}
+		registerPage.clearEmailField();
+		registerPage.enterEmail("abcdefghijklmnopabcdefghijklmnopqabcdefghijklmnopabcdefghijklmno@gmail.com");
+		registerPage.clickOnContinueButton();
+		Assert.assertFalse(registerPage.isEmaleWarningDisplayed());
 
 		// ----------------------------------------
-
-		WebElement telephoneField = driver.findElement(By.id("input-telephone"));
-		String actualTelephoneFieldHeight = telephoneField.getCssValue("height");
-		String actualTelephoneFieldWidth = telephoneField.getCssValue("width");
-
+		registerPage = new RegisterPage(driver);
+		String actualTelephoneFieldHeight = registerPage.getTelephoneHeight();
+		String actualTelephoneFieldWidth = registerPage.getTelephoneWidth();
 		Assert.assertEquals(actualTelephoneFieldHeight, expectedHeight);
 		Assert.assertEquals(actualTelephoneFieldWidth, expectedWidth);
 
 		expectedWarning = "Telephone must be between 3 and 32 characters!";
+		registerPage.clearTelephoneField();
+		registerPage.enterTelephone("");
+		registerPage.clickOnContinueButton();
+		Assert.assertEquals(registerPage.getTelphoneWarning(), expectedWarning);
 
-		continueButton = driver.findElement(By.xpath("//input[@value='Continue']"));
-		telephoneField.clear();
-		telephoneField.sendKeys("");
-		continueButton.click();
-		Assert.assertEquals(
-				driver.findElement(By.xpath("//input[@id='input-telephone']/following-sibling::div")).getText(),
-				expectedWarning);
+		registerPage = new RegisterPage(driver);
+		registerPage.clearTelephoneField();
+		registerPage.enterTelephone("a");
+		registerPage.clickOnContinueButton();
+		Assert.assertEquals(registerPage.getTelphoneWarning(), expectedWarning);
 
-		continueButton = driver.findElement(By.xpath("//input[@value='Continue']"));
-		telephoneField = driver.findElement(By.id("input-telephone"));
-		telephoneField.clear();
-		telephoneField.sendKeys("a");
-		continueButton.click();
-		Assert.assertEquals(
-				driver.findElement(By.xpath("//input[@id='input-telephone']/following-sibling::div")).getText(),
-				expectedWarning);
+		registerPage = new RegisterPage(driver);
+		registerPage.clearTelephoneField();
+		registerPage.enterTelephone("ab");
+		registerPage.clickOnContinueButton();
+		Assert.assertEquals(registerPage.getTelphoneWarning(), expectedWarning);
 
-		continueButton = driver.findElement(By.xpath("//input[@value='Continue']"));
-		telephoneField = driver.findElement(By.id("input-telephone"));
-		telephoneField.clear();
-		telephoneField.sendKeys("ab");
-		continueButton.click();
-		Assert.assertEquals(
-				driver.findElement(By.xpath("//input[@id='input-telephone']/following-sibling::div")).getText(),
-				expectedWarning);
+		registerPage = new RegisterPage(driver);
+		registerPage.clearTelephoneField();
+		registerPage.enterTelephone("abc");
+		registerPage.clickOnContinueButton();
+		Assert.assertFalse(registerPage.isTelephoneWarningDisplayed());
 
-		continueButton = driver.findElement(By.xpath("//input[@value='Continue']"));
-		telephoneField = driver.findElement(By.id("input-telephone"));
-		telephoneField.clear();
-		telephoneField.sendKeys("abc");
-		continueButton.click();
-		try {
-			Assert.assertFalse(driver.findElement(By.xpath("//input[@id='input-telephone']/following-sibling::div"))
-					.isDisplayed());
-		} catch (NoSuchElementException e) {
-			Assert.assertTrue(true);
-		}
+		registerPage = new RegisterPage(driver);
+		registerPage.clearTelephoneField();
+		registerPage.enterTelephone("abcd");
+		registerPage.clickOnContinueButton();
+		Assert.assertFalse(registerPage.isTelephoneWarningDisplayed());
 
-		continueButton = driver.findElement(By.xpath("//input[@value='Continue']"));
-		telephoneField = driver.findElement(By.id("input-telephone"));
-		telephoneField.clear();
-		telephoneField.sendKeys("abcd");
-		continueButton.click();
-		try {
-			Assert.assertFalse(driver.findElement(By.xpath("//input[@id='input-telephone']/following-sibling::div"))
-					.isDisplayed());
-		} catch (NoSuchElementException e) {
-			Assert.assertTrue(true);
-		}
+		registerPage = new RegisterPage(driver);
+		registerPage.clearTelephoneField();
+		registerPage.enterTelephone("abcdefghijklmnop");
+		registerPage.clickOnContinueButton();
+		Assert.assertFalse(registerPage.isTelephoneWarningDisplayed());
 
-		continueButton = driver.findElement(By.xpath("//input[@value='Continue']"));
-		telephoneField = driver.findElement(By.id("input-telephone"));
-		telephoneField.clear();
-		telephoneField.sendKeys("abcdefghijklmnop");
-		continueButton.click();
-		try {
-			Assert.assertFalse(driver.findElement(By.xpath("//input[@id='input-telephone']/following-sibling::div"))
-					.isDisplayed());
-		} catch (NoSuchElementException e) {
-			Assert.assertTrue(true);
-		}
+		registerPage = new RegisterPage(driver);
+		registerPage.clearTelephoneField();
+		registerPage.enterTelephone("abcdefghijklmnopabcdefghijklmnop");
+		registerPage.clickOnContinueButton();
+		Assert.assertFalse(registerPage.isTelephoneWarningDisplayed());
 
-		continueButton = driver.findElement(By.xpath("//input[@value='Continue']"));
-		telephoneField = driver.findElement(By.id("input-telephone"));
-		telephoneField.clear();
-		telephoneField.sendKeys("abcdefghijklmnopabcdefghijklmnop");
-		continueButton.click();
-		try {
-			Assert.assertFalse(driver.findElement(By.xpath("//input[@id='input-telephone']/following-sibling::div"))
-					.isDisplayed());
-		} catch (NoSuchElementException e) {
-			Assert.assertTrue(true);
-		}
-
-		continueButton = driver.findElement(By.xpath("//input[@value='Continue']"));
-		telephoneField = driver.findElement(By.id("input-telephone"));
-		telephoneField.clear();
-		telephoneField.sendKeys("abcdefghijklmnopabcdefghijklmnopq");
-		continueButton.click();
-		Assert.assertEquals(
-				driver.findElement(By.xpath("//input[@id='input-telephone']/following-sibling::div")).getText(),
-				expectedWarning);
+		registerPage = new RegisterPage(driver);
+		registerPage.clearTelephoneField();
+		registerPage.enterTelephone("abcdefghijklmnopabcdefghijklmnopq");
+		registerPage.clickOnContinueButton();
+		Assert.assertFalse(registerPage.isTelephoneWarningDisplayed());
 
 		// -----------------------
-		WebElement passwordField = driver.findElement(By.id("input-password"));
-		String actualPasswordFieldHeight = passwordField.getCssValue("height");
-		String actualPasswordFieldWidth = passwordField.getCssValue("width");
-
+		registerPage = new RegisterPage(driver);
+		String actualPasswordFieldHeight = registerPage.getPasswordHeight();
+		String actualPasswordFieldWidth = registerPage.getPasswordWidth();
 		Assert.assertEquals(actualPasswordFieldHeight, expectedHeight);
 		Assert.assertEquals(actualPasswordFieldWidth, expectedWidth);
 
 		expectedWarning = "Password must be between 4 and 20 characters!";
 
-		continueButton = driver.findElement(By.xpath("//input[@value='Continue']"));
-		passwordField.clear();
-		passwordField.sendKeys("");
-		continueButton.click();
-		Assert.assertEquals(
-				driver.findElement(By.xpath("//input[@id='input-password']/following-sibling::div")).getText(),
-				expectedWarning);
+		registerPage.clearPasswordField();
+		registerPage.enterPassword("");
+		registerPage.clickOnContinueButton();
+		Assert.assertEquals(registerPage.isPasswordWarningDisplayed(), expectedWarning);
 
-		continueButton = driver.findElement(By.xpath("//input[@value='Continue']"));
-		passwordField = driver.findElement(By.id("input-password"));
-		passwordField.clear();
-		passwordField.sendKeys("a");
-		continueButton.click();
-		Assert.assertEquals(
-				driver.findElement(By.xpath("//input[@id='input-password']/following-sibling::div")).getText(),
-				expectedWarning);
+		registerPage = new RegisterPage(driver);
+		registerPage.clearPasswordField();
+		registerPage.enterPassword("a");
+		registerPage.clickOnContinueButton();
+		Assert.assertEquals(registerPage.isPasswordWarningDisplayed(), expectedWarning);
 
-		continueButton = driver.findElement(By.xpath("//input[@value='Continue']"));
-		passwordField = driver.findElement(By.id("input-password"));
-		passwordField.clear();
-		passwordField.sendKeys("ab");
-		continueButton.click();
-		Assert.assertEquals(
-				driver.findElement(By.xpath("//input[@id='input-password']/following-sibling::div")).getText(),
-				expectedWarning);
+		registerPage = new RegisterPage(driver);
+		registerPage.clearPasswordField();
+		registerPage.enterPassword("ab");
+		registerPage.clickOnContinueButton();
+		Assert.assertEquals(registerPage.isPasswordWarningDisplayed(), expectedWarning);
 
-		continueButton = driver.findElement(By.xpath("//input[@value='Continue']"));
-		passwordField = driver.findElement(By.id("input-password"));
-		passwordField.clear();
-		passwordField.sendKeys("abc");
-		continueButton.click();
-		Assert.assertEquals(
-				driver.findElement(By.xpath("//input[@id='input-password']/following-sibling::div")).getText(),
-				expectedWarning);
+		registerPage = new RegisterPage(driver);
+		registerPage.clearPasswordField();
+		registerPage.enterPassword("abc");
+		registerPage.clickOnContinueButton();
+		Assert.assertEquals(registerPage.isPasswordWarningDisplayed(), expectedWarning);
 
-		continueButton = driver.findElement(By.xpath("//input[@value='Continue']"));
-		passwordField = driver.findElement(By.id("input-password"));
-		passwordField.clear();
-		passwordField.sendKeys("abcd");
-		continueButton.click();
-		try {
-			Assert.assertFalse(
-					driver.findElement(By.xpath("//input[@id='input-password']/following-sibling::div")).isDisplayed());
-		} catch (NoSuchElementException e) {
-			Assert.assertTrue(true);
-		}
+		registerPage = new RegisterPage(driver);
+		registerPage.clearPasswordField();
+		registerPage.enterPassword("abcd");
+		registerPage.clickOnContinueButton();
+		Assert.assertFalse(registerPage.isPasswordWarningDisplayed());
 
-		continueButton = driver.findElement(By.xpath("//input[@value='Continue']"));
-		passwordField = driver.findElement(By.id("input-password"));
-		passwordField.clear();
-		passwordField.sendKeys("abcde");
-		continueButton.click();
-		try {
-			Assert.assertFalse(
-					driver.findElement(By.xpath("//input[@id='input-password']/following-sibling::div")).isDisplayed());
-		} catch (NoSuchElementException e) {
-			Assert.assertTrue(true);
-		}
+		registerPage = new RegisterPage(driver);
+		registerPage.clearPasswordField();
+		registerPage.enterPassword("abcde");
+		registerPage.clickOnContinueButton();
+		Assert.assertFalse(registerPage.isPasswordWarningDisplayed());
 
-		continueButton = driver.findElement(By.xpath("//input[@value='Continue']"));
-		passwordField = driver.findElement(By.id("input-password"));
-		passwordField.clear();
-		passwordField.sendKeys("abcdefghij");
-		continueButton.click();
-		try {
-			Assert.assertFalse(
-					driver.findElement(By.xpath("//input[@id='input-password']/following-sibling::div")).isDisplayed());
-		} catch (NoSuchElementException e) {
-			Assert.assertTrue(true);
-		}
+		registerPage = new RegisterPage(driver);
+		registerPage.clearPasswordField();
+		registerPage.enterPassword("abcdefghij");
+		registerPage.clickOnContinueButton();
+		Assert.assertFalse(registerPage.isPasswordWarningDisplayed());
 
-		continueButton = driver.findElement(By.xpath("//input[@value='Continue']"));
-		passwordField = driver.findElement(By.id("input-password"));
-		passwordField.clear();
-		passwordField.sendKeys("abcdefghijabcdefghi");
-		continueButton.click();
-		try {
-			Assert.assertFalse(
-					driver.findElement(By.xpath("//input[@id='input-password']/following-sibling::div")).isDisplayed());
-		} catch (NoSuchElementException e) {
-			Assert.assertTrue(true);
-		}
+		registerPage = new RegisterPage(driver);
+		registerPage.clearPasswordField();
+		registerPage.enterPassword("abcdefghijabcdefghi");
+		registerPage.clickOnContinueButton();
+		Assert.assertFalse(registerPage.isPasswordWarningDisplayed());
 
-		continueButton = driver.findElement(By.xpath("//input[@value='Continue']"));
-		passwordField = driver.findElement(By.id("input-password"));
-		passwordField.clear();
-		passwordField.sendKeys("abcdefghijabcdefghij");
-		continueButton.click();
-		try {
-			Assert.assertFalse(
-					driver.findElement(By.xpath("//input[@id='input-password']/following-sibling::div")).isDisplayed());
-		} catch (NoSuchElementException e) {
-			Assert.assertTrue(true);
-		}
+		registerPage = new RegisterPage(driver);
+		registerPage.clearPasswordField();
+		registerPage.enterPassword("abcdefghijabcdefghij");
+		registerPage.clickOnContinueButton();
+		Assert.assertFalse(registerPage.isPasswordWarningDisplayed());
 
-		continueButton = driver.findElement(By.xpath("//input[@value='Continue']"));
-		passwordField = driver.findElement(By.id("input-password"));
-		passwordField.clear();
-		passwordField.sendKeys("abcdefghijabcdefghijk");
-		continueButton.click();
-		Assert.assertEquals(
-				driver.findElement(By.xpath("//input[@id='input-password']/following-sibling::div")).getText(),
-				expectedWarning);
+		registerPage = new RegisterPage(driver);
+		registerPage.clearPasswordField();
+		registerPage.enterPassword("abcdefghijabcdefghijk");
+		registerPage.clickOnContinueButton();
+		Assert.assertFalse(registerPage.isPasswordWarningDisplayed());
 
-		String actualConfirmPasswordFieldHeight = driver.findElement(By.id("input-confirm")).getCssValue("height");
-		String actualConfirmPasswordFieldWidth = driver.findElement(By.id("input-confirm")).getCssValue("width");
-
+		registerPage = new RegisterPage(driver);
+		String actualConfirmPasswordFieldHeight = registerPage.getConPasswordHeight();
+		String actualConfirmPasswordFieldWidth = registerPage.getConPasswordWidth();
 		Assert.assertEquals(actualConfirmPasswordFieldHeight, expectedHeight);
 		Assert.assertEquals(actualConfirmPasswordFieldWidth, expectedWidth);
 
@@ -770,5 +657,61 @@ public class Register extends Base {
 				System.getProperty("user.dir") + "\\Screenshot\\expectedRegisterUI.png"));
 
 	}
+
+	@Test(priority = 17)
+	public void verifyTextfieldSpaceTriming() {
+
+		SoftAssert softAssert = new SoftAssert();
+		String enteredFirstName = "      " + prop.getProperty("firstName") + "      ";
+		registerPage.enterFirstName(enteredFirstName);
+		String enteredLastName = "      " + prop.getProperty("lastName") + "     ";
+		registerPage.enterLastName(enteredLastName);
+		String enteredEmail = "       " + CommonUtils.generateEmale() + "        ";
+		registerPage.enterEmail(enteredEmail);
+		String enteredTelephone = "    " + prop.getProperty("telephone") + "    ";
+		registerPage.enterTelephone(enteredTelephone);
+		registerPage.enterPassword(prop.getProperty("validPassword"));
+		registerPage.enterConfirmPassword(prop.getProperty("validPassword"));
+		registerPage.seletPrivacyPoliy();
+		accountSuccessPage = registerPage.clickOnContinueButton();
+		accountPage = accountSuccessPage.clickOnContinueButton();
+		editAccountInforationPage = accountPage.clickOnEditYourAccountInformation();
+		softAssert.assertEquals(editAccountInforationPage.getFirstNameValue(), enteredFirstName.trim());
+		softAssert.assertEquals(editAccountInforationPage.getLastNameValue(), enteredLastName.trim());
+		softAssert.assertEquals(editAccountInforationPage.getEmailValue(), enteredEmail.trim());
+		softAssert.assertEquals(editAccountInforationPage.getTelephoneValue(), enteredTelephone.trim());
+		softAssert.assertAll();
+	}
+
+	@Test(priority = 18)
+	public void verifyPolicyCheckBox() {
+
+		Assert.assertFalse(registerPage.isPrivacyPolicySelected());
+
+	}
+
+	@Test(priority = 19)
+	public void verifyPoliccyCheckBox() {
+		registerPage.enterFirstName(prop.getProperty("firstName"));
+		registerPage.enterLastName(prop.getProperty("lastName"));
+		registerPage.enterEmail(CommonUtils.generateEmale());
+		registerPage.enterTelephone(prop.getProperty("telephone"));
+		registerPage.enterPassword(prop.getProperty("validPassword"));
+		registerPage.enterConfirmPassword(prop.getProperty("validPassword"));
+		registerPage.selectYesNewsletterOption();
+		registerPage.clickOnContinueButton();
+		String errormsg = "Warning: You must agree to the Privacy Policy!";
+		Assert.assertEquals(registerPage.getPolicyWarning(), errormsg);
+
+	}
+	@Test(priority = 20)
+	public void verifyPassword()
+  {
+
+	      Assert.assertEquals(registerPage.getPasswordType(), "password");
+	      Assert.assertEquals(registerPage.getPasswordType(), "password");
+	      
+  }
+	
 
 }

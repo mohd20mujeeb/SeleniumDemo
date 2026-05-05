@@ -28,4 +28,8 @@ public class AccountPage {
 		   suscribeUnsuscribeNewsLetterOption.click();
 		   return new NewsletterPage(driver);
 		}
+   public EditAccountInformationPage clickOnEditYourAccountInformation() {
+	   editYourAccountInformationOption.click();
+	   return new EditAccountInformationPage(driver);
+   }
 }
