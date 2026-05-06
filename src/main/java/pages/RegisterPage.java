@@ -97,6 +97,34 @@ public class RegisterPage {
 	@FindBy(css = "label[for='input-confirm']")
 	private WebElement conpassLable;
 
+	@FindBy(xpath = "//a/i[@class='fa fa-phone']")
+	private WebElement phoneIconOption;
+
+	@FindBy(xpath = "//a/i[@class='fa fa-heart']")
+	private WebElement heartIconOption;
+
+	@FindBy(xpath = "//a[@title='Shopping Cart']")
+	private WebElement shopingCartOption;
+
+	@FindBy(xpath = "//span[.='Checkout']")
+	private WebElement checkOutOption;
+
+	@FindBy(linkText = "Qafox.com")
+	private WebElement qafozLogoOption;
+
+	@FindBy(xpath = "//button[@class='btn btn-default btn-lg']")
+	private WebElement searchOption;
+
+	@FindBy(linkText = "Account")
+	private WebElement accountBreadcrumb;
+
+	@FindBy(xpath = "//a/i[@class='fa fa-home']")
+	private WebElement homeOption;
+	
+	@FindBy(xpath = "//a[@class=\\\"agree\\\"]")
+	private WebElement privacyPolicyOption;
+	
+
 	public void enterFirstName(String firstNameText) {
 		firstNameField.sendKeys(firstNameText);
 	}
@@ -164,6 +192,10 @@ public class RegisterPage {
 
 	public boolean didWeNavigateToRegisterPage() {
 		return registerBreadCrumb.isDisplayed();
+	}
+
+	public void clickOnRegisterBreadCrumb() {
+		registerBreadCrumb.click();
 	}
 
 	public void clickOnMyAccount() {
@@ -323,6 +355,7 @@ public class RegisterPage {
 		}
 		return status;
 	}
+
 	public String getLastNameHeight() {
 		return lastNameField.getCssValue("height");
 	}
@@ -344,6 +377,7 @@ public class RegisterPage {
 		}
 		return status;
 	}
+
 	public String getEmaleHeight() {
 		return emailField.getCssValue("height");
 	}
@@ -361,6 +395,7 @@ public class RegisterPage {
 		}
 		return status;
 	}
+
 	public String getTelephoneHeight() {
 		return telephoneField.getCssValue("height");
 	}
@@ -382,6 +417,7 @@ public class RegisterPage {
 		}
 		return status;
 	}
+
 	public String getPasswordHeight() {
 		return passwordField.getCssValue("height");
 	}
@@ -403,6 +439,7 @@ public class RegisterPage {
 		}
 		return status;
 	}
+
 	public String getConPasswordHeight() {
 		return confirmField.getCssValue("height");
 	}
@@ -410,14 +447,60 @@ public class RegisterPage {
 	public String getConPasswordWidth() {
 		return confirmField.getCssValue("width");
 	}
+
 	public boolean isPrivacyPolicySelected() {
 		return privacyField.isSelected();
 	}
+
 	public String getPasswordType() {
 		return passwordField.getAttribute("type");
 	}
+
 	public String getConfirmPasswordType() {
 		return confirmField.getAttribute("type");
 	}
+
+	public ContactUsPage selectPhoneIconOption() {
+		phoneIconOption.click();
+		return new ContactUsPage(driver);
+	}
+
+	public LoginPage selectHeartIconOption() {
+		heartIconOption.click();
+		return new LoginPage(driver);
+	}
+
+	public ShoppingCartPage selectShoppingCartOption() {
+		shopingCartOption.click();
+		return new ShoppingCartPage(driver);
+	}
+
+	public ShoppingCartPage selectCheckoutOption() {
+		checkOutOption.click();
+		return new ShoppingCartPage(driver);
+	}
+
+	public LandingPage selectQfoxLogoOption() {
+		qafozLogoOption.click();
+		return new LandingPage(driver);
+	}
+
+	public SearchPage selectSearchOption() {
+		searchOption.click();
+		return new SearchPage(driver);
+	}
+
+	public LoginPage selectAccountBreadcrumb() {
+		accountBreadcrumb.click();
+		return new LoginPage(driver);
+	}
+
+	public LandingPage selectHomeoption() {
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", homeOption);
+		return new LandingPage(driver);
+	}
 	
+	public void clickOn
+	
+
 }

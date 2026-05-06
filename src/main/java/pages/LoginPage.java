@@ -19,8 +19,14 @@ public class LoginPage {
     @FindBy(linkText = "Register")
     private WebElement registerOption;
     
+    @FindBy(linkText = "Login")
+    private WebElement loginBreadcrumb;
+    
     public void  clickOnContinueButton() {
     	continueButton.click();
+    }
+    public boolean didWeNavigateToLoginPage() {
+    	return loginBreadcrumb.isDisplayed();
     }
     
     public void clickOnRegisterOption() {

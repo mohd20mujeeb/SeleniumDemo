@@ -14,9 +14,10 @@ import utils.CommonUtils;
 
 public class Base {
 	WebDriver driver;
+
 	public WebDriver openBrowserAndAppliation() {
-        Properties prop= CommonUtils.loadProperties();
-        String browserName=prop.getProperty("browserName");
+		Properties prop = CommonUtils.loadProperties();
+		String browserName = prop.getProperty("browserName");
 
 		if (browserName.equals("chrome")) {
 			driver = new ChromeDriver();
@@ -33,7 +34,12 @@ public class Base {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("appUrl"));
-		
+
+		return driver;
+	}
+
+	public WebDriver navigateBack(WebDriver driver) {
+		driver.navigate().back();
 		return driver;
 	}
 }

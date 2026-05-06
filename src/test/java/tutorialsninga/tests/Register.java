@@ -8,12 +8,17 @@ import java.time.Duration;
 import java.util.NoSuchElementException;
 import java.util.Properties;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.io.FileHandler;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -24,11 +29,14 @@ import org.testng.asserts.SoftAssert;
 import base.Base;
 import pages.AccountPage;
 import pages.AccountSuccessPage;
+import pages.ContactUsPage;
 import pages.EditAccountInformationPage;
 import pages.LandingPage;
 import pages.LoginPage;
 import pages.NewsletterPage;
 import pages.RegisterPage;
+import pages.SearchPage;
+import pages.ShoppingCartPage;
 import utils.CommonUtils;
 
 public class Register extends Base {
@@ -42,6 +50,9 @@ public class Register extends Base {
 	NewsletterPage newsletterPage;
 	LoginPage loginPage;
 	EditAccountInformationPage editAccountInforationPage;
+	ContactUsPage contactUsPage;
+	ShoppingCartPage shoppingCartPage;
+	SearchPage searchPage;
 
 	@BeforeMethod
 	public void setup() {
@@ -713,5 +724,71 @@ public class Register extends Base {
 	      
   }
 	
+
+	  @Test(priority = 21)
+		public void verifyAllRegisterLink() 
+	  {
+		 
+	      contactUsPage=registerPage.selectPhoneIconOption();
+	      Assert.assertTrue(contactUsPage.didWeNavigateToContactUsPage());
+	      driver=navigateBack(driver);
+	      
+	      registerPage = new  RegisterPage(driver);
+	      loginPage=registerPage.selectHeartIconOption();
+	      Assert.assertTrue(loginPage.didWeNavigateToLoginPage());
+	      driver=navigateBack(driver);
+	      
+	      registerPage = new  RegisterPage(driver);
+	      shoppingCartPage= registerPage.selectShoppingCartOption();
+	      Assert.assertTrue(shoppingCartPage.didWeNavigateToShoppingCartPage());
+	      driver=navigateBack(driver);
+	      
+	      registerPage = new  RegisterPage(driver);
+	      shoppingCartPage=registerPage.selectCheckoutOption();
+	      Assert.assertTrue(shoppingCartPage.didWeNavigateToShoppingCartPage());
+	      driver=navigateBack(driver);
+	      
+	      registerPage = new  RegisterPage(driver);
+	      landingPage=registerPage.selectQfoxLogoOption();
+	      Assert.assertEquals(driver.getCurrentUrl(),prop.getProperty("landingPageURL"));
+	      driver=navigateBack(driver);
+	      
+	      registerPage = new  RegisterPage(driver);
+	      searchPage=registerPage.selectSearchOption();
+	      searchPage.didWeNavigateToSearchPage();
+	      driver=navigateBack(driver);
+	   
+	      registerPage = new  RegisterPage(driver);
+	      registerPage.clickOnRegisterBreadCrumb();
+	      Assert.assertTrue(registerPage.didWeNavigateToRegisterPage());
+	      
+	      registerPage = new  RegisterPage(driver);
+	      loginPage=registerPage.selectAccountBreadcrumb();
+	      Assert.assertTrue(loginPage.didWeNavigateToLoginPage());
+	      driver=navigateBack(driver);
+	      
+	      registerPage = new  RegisterPage(driver);
+	      landingPage=registerPage.selectHomeoption();
+          Assert.assertEquals(driver.getCurrentUrl(), prop.getProperty("landingPageURL"));
+          driver=navigateBack(driver);
+          
+          registerPage = new  RegisterPage(driver);
+	      loginPage=registerPage.selectLoginOption();
+	      Assert.assertTrue(loginPage.didWeNavigateToLoginPage());
+	      driver=navigateBack(driver);
+	      
+	      registerPage = new  RegisterPage(driver);
+	      driver.findElement(By.xpath("//a[@class=\"agree\"]")).click();
+	      WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+	      WebElement xOption = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[.='×']")));
+	      Assert.assertTrue(xOption.isDisplayed());
+	      xOption.click();
+	      
+	      driver.findElement(By.xpath("//input[@type='submit']")).click();
+	      Assert.assertTrue(driver.findElement(By.linkText("Register")).isDisplayed());
+	      driver.findElement(By.linkText("Register")).click();
+
+	      
+	}
 
 }
