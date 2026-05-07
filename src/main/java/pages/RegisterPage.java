@@ -1,12 +1,17 @@
 package pages;
 
+import java.time.Duration;
 import java.util.NoSuchElementException;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 public class RegisterPage {
 	WebDriver driver;
@@ -121,9 +126,22 @@ public class RegisterPage {
 	@FindBy(xpath = "//a/i[@class='fa fa-home']")
 	private WebElement homeOption;
 	
-	@FindBy(xpath = "//a[@class=\\\"agree\\\"]")
+	@FindBy(xpath = "//a[@class='agree']")
 	private WebElement privacyPolicyOption;
 	
+	@FindBy(xpath = "//button[.='×']")
+	private WebElement closePrivacyPolicyDialogOption;
+	
+	@FindBy(xpath = "//button[.='×']")
+	private WebElement xOption;
+	
+	@FindBy(xpath = "//h1[.='Register Account']")
+	private WebElement registerHeading;
+	
+	private By xOptionPrivacyPoilicy=By.xpath("//button[.='×']");
+	
+	@FindBy(linkText = "Logout")
+	private WebElement LogoutOption;
 
 	public void enterFirstName(String firstNameText) {
 		firstNameField.sendKeys(firstNameText);
@@ -149,7 +167,7 @@ public class RegisterPage {
 		confirmField.sendKeys(confirmText);
 	}
 
-	public void seletPrivacyPoliy() {
+	public void selectPrivacyPoliy() {
 		privacyField.click();
 	}
 
@@ -500,7 +518,23 @@ public class RegisterPage {
 		return new LandingPage(driver);
 	}
 	
-	public void clickOn
+	public void clickOnPolicyOption() {
+		privacyPolicyOption.click();
+	}
+	public boolean waitAndCheckDisplayStatusOfClosePrivacyPolicyOption(WebDriver driver, int seconds) {
+		 WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(seconds));
+	     wait.until(ExpectedConditions.visibilityOfElementLocated(xOptionPrivacyPoilicy));
+	      return xOption.isDisplayed();
+	}
+	public void closePrivacyPolicyDialog() {
+		xOption.click();
+	}
+	public String getRegisterHeading() {
+		return registerHeading.getText();
+	}
+	public boolean isLogoutOptionDisplayed() {
+		return LogoutOption.isDisplayed();
+	}
 	
 
 }

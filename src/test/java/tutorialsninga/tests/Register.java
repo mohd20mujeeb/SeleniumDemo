@@ -8,17 +8,12 @@ import java.time.Duration;
 import java.util.NoSuchElementException;
 import java.util.Properties;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.io.FileHandler;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -80,7 +75,7 @@ public class Register extends Base {
 		registerPage.enterTelephone(prop.getProperty("telephone"));
 		registerPage.enterPassword(prop.getProperty("validPassword"));
 		registerPage.enterConfirmPassword(prop.getProperty("validPassword"));
-		registerPage.seletPrivacyPoliy();
+		registerPage.selectPrivacyPoliy();
 		accountSuccessPage = registerPage.clickOnContinueButton();
 		Assert.assertTrue(accountSuccessPage.isUserLoggedIn());
 		String expectedHeading = "Your Account Has Been Created!";
@@ -109,7 +104,7 @@ public class Register extends Base {
 		registerPage.enterPassword(prop.getProperty("validPassword"));
 		registerPage.enterConfirmPassword(prop.getProperty("validPassword"));
 		registerPage.selectYesNewsletterOption();
-		registerPage.seletPrivacyPoliy();
+		registerPage.selectPrivacyPoliy();
 		accountSuccessPage = registerPage.clickOnContinueButton();
 		Assert.assertTrue(accountSuccessPage.isUserLoggedIn());
 		Assert.assertTrue(accountSuccessPage.didWeNavigateToAccountSuccessPage());
@@ -157,7 +152,7 @@ public class Register extends Base {
 		registerPage.enterPassword(prop.getProperty("validPassword"));
 		registerPage.enterConfirmPassword(prop.getProperty("validPassword"));
 		registerPage.selectYesNewsletterOption();
-		registerPage.seletPrivacyPoliy();
+		registerPage.selectPrivacyPoliy();
 		accountSuccessPage = registerPage.clickOnContinueButton();
 		accountPage = accountSuccessPage.clickOnContinueButton();
 		newsletterPage = accountPage.SelectSuscribeUnsuscribeNewsletterOption();
@@ -174,7 +169,7 @@ public class Register extends Base {
 		registerPage.enterPassword(prop.getProperty("validPassword"));
 		registerPage.enterConfirmPassword(prop.getProperty("validPassword"));
 		registerPage.selectNoNewsletterOption();
-		registerPage.seletPrivacyPoliy();
+		registerPage.selectPrivacyPoliy();
 		accountSuccessPage = registerPage.clickOnContinueButton();
 		accountPage = accountSuccessPage.clickOnContinueButton();
 		newsletterPage = accountPage.SelectSuscribeUnsuscribeNewsletterOption();
@@ -208,7 +203,7 @@ public class Register extends Base {
 		registerPage.enterPassword(prop.getProperty("validPassword"));
 		registerPage.enterConfirmPassword(prop.getProperty("missmatchingPass"));
 		registerPage.selectYesNewsletterOption();
-		registerPage.seletPrivacyPoliy();
+		registerPage.selectPrivacyPoliy();
 		registerPage.clickOnContinueButton();
 
 		String conPassWarMsg = "Password confirmation does not match password!";
@@ -225,7 +220,7 @@ public class Register extends Base {
 		registerPage.enterPassword(prop.getProperty("validPassword"));
 		registerPage.enterConfirmPassword(prop.getProperty("validPassword"));
 		registerPage.selectYesNewsletterOption();
-		registerPage.seletPrivacyPoliy();
+		registerPage.selectPrivacyPoliy();
 		registerPage.clickOnContinueButton();
 		String EmailErrorMsg = "Warning: E-Mail Address is already registered!";
 		Assert.assertEquals(registerPage.getExistingEmailWarning(), EmailErrorMsg);
@@ -242,7 +237,7 @@ public class Register extends Base {
 		registerPage.enterPassword(prop.getProperty("validPassword"));
 		registerPage.enterConfirmPassword(prop.getProperty("validPassword"));
 		registerPage.selectYesNewsletterOption();
-		registerPage.seletPrivacyPoliy();
+		registerPage.selectPrivacyPoliy();
 		registerPage.clickOnContinueButton();
 		Thread.sleep(3000);
 
@@ -280,6 +275,7 @@ public class Register extends Base {
 
 	@Test(priority = 10)
 	public void varifyRegisterWithInvalidTelephone() {
+		//first fail
 		registerPage.enterFirstName(prop.getProperty("firstName"));
 		registerPage.enterLastName(prop.getProperty("lastName"));
 		registerPage.enterEmail(CommonUtils.generateEmale());
@@ -287,7 +283,7 @@ public class Register extends Base {
 		registerPage.enterPassword(prop.getProperty("validPassword"));
 		registerPage.enterConfirmPassword(prop.getProperty("validPassword"));
 		registerPage.selectYesNewsletterOption();
-		registerPage.seletPrivacyPoliy();
+		registerPage.selectPrivacyPoliy();
 		registerPage.clickOnContinueButton();
 		String ExpectedErrorMessage = "Invalid Telephone Number";
 		boolean state = false;
@@ -377,7 +373,7 @@ public class Register extends Base {
 		registerPage.enterPassword(" ");
 		registerPage.enterConfirmPassword(" ");
 		registerPage.selectYesNewsletterOption();
-		registerPage.seletPrivacyPoliy();
+		registerPage.selectPrivacyPoliy();
 		registerPage.clickOnContinueButton();
 
 		String expectedErrorFn = "First Name must be between 1 and 32 characters!";
@@ -395,6 +391,7 @@ public class Register extends Base {
 
 	@Test(priority = 15, dataProvider = "passwordSupplier")
 	public void verifyPasswordFollowingStandard(String passwordText) {
+		//fail test case
 		registerPage.enterFirstName(prop.getProperty("firstName"));
 		registerPage.enterLastName(prop.getProperty("lastName"));
 		registerPage.enterEmail(CommonUtils.generateEmale());
@@ -402,7 +399,7 @@ public class Register extends Base {
 		registerPage.selectYesNewsletterOption();
 		registerPage.enterPassword(passwordText);
 		registerPage.enterConfirmPassword(passwordText);
-		registerPage.seletPrivacyPoliy();
+		registerPage.selectPrivacyPoliy();
 		registerPage.clickOnContinueButton();
 
 		String errormsg = "Password is not matching standard ";
@@ -427,7 +424,7 @@ public class Register extends Base {
 
 	@Test(priority = 16)
 	public void verifyRegisteringAccountFieldsHeightWidthAligment() throws IOException {
-
+//third fail 
 		String expectedHeight = "34px";
 		String expectedWidth = "701.25px";
 		String actualFirstNameFieldHeight = registerPage.getFirstNameHeight();
@@ -671,6 +668,7 @@ public class Register extends Base {
 
 	@Test(priority = 17)
 	public void verifyTextfieldSpaceTriming() {
+		//4th fail
 
 		SoftAssert softAssert = new SoftAssert();
 		String enteredFirstName = "      " + prop.getProperty("firstName") + "      ";
@@ -683,7 +681,7 @@ public class Register extends Base {
 		registerPage.enterTelephone(enteredTelephone);
 		registerPage.enterPassword(prop.getProperty("validPassword"));
 		registerPage.enterConfirmPassword(prop.getProperty("validPassword"));
-		registerPage.seletPrivacyPoliy();
+		registerPage.selectPrivacyPoliy();
 		accountSuccessPage = registerPage.clickOnContinueButton();
 		accountPage = accountSuccessPage.clickOnContinueButton();
 		editAccountInforationPage = accountPage.clickOnEditYourAccountInformation();
@@ -715,80 +713,125 @@ public class Register extends Base {
 		Assert.assertEquals(registerPage.getPolicyWarning(), errormsg);
 
 	}
+
 	@Test(priority = 20)
-	public void verifyPassword()
-  {
+	public void verifyPassword() {
 
-	      Assert.assertEquals(registerPage.getPasswordType(), "password");
-	      Assert.assertEquals(registerPage.getPasswordType(), "password");
-	      
-  }
-	
+		Assert.assertEquals(registerPage.getPasswordType(), "password");
+		Assert.assertEquals(registerPage.getPasswordType(), "password");
 
-	  @Test(priority = 21)
-		public void verifyAllRegisterLink() 
-	  {
-		 
-	      contactUsPage=registerPage.selectPhoneIconOption();
-	      Assert.assertTrue(contactUsPage.didWeNavigateToContactUsPage());
-	      driver=navigateBack(driver);
-	      
-	      registerPage = new  RegisterPage(driver);
-	      loginPage=registerPage.selectHeartIconOption();
-	      Assert.assertTrue(loginPage.didWeNavigateToLoginPage());
-	      driver=navigateBack(driver);
-	      
-	      registerPage = new  RegisterPage(driver);
-	      shoppingCartPage= registerPage.selectShoppingCartOption();
-	      Assert.assertTrue(shoppingCartPage.didWeNavigateToShoppingCartPage());
-	      driver=navigateBack(driver);
-	      
-	      registerPage = new  RegisterPage(driver);
-	      shoppingCartPage=registerPage.selectCheckoutOption();
-	      Assert.assertTrue(shoppingCartPage.didWeNavigateToShoppingCartPage());
-	      driver=navigateBack(driver);
-	      
-	      registerPage = new  RegisterPage(driver);
-	      landingPage=registerPage.selectQfoxLogoOption();
-	      Assert.assertEquals(driver.getCurrentUrl(),prop.getProperty("landingPageURL"));
-	      driver=navigateBack(driver);
-	      
-	      registerPage = new  RegisterPage(driver);
-	      searchPage=registerPage.selectSearchOption();
-	      searchPage.didWeNavigateToSearchPage();
-	      driver=navigateBack(driver);
-	   
-	      registerPage = new  RegisterPage(driver);
-	      registerPage.clickOnRegisterBreadCrumb();
-	      Assert.assertTrue(registerPage.didWeNavigateToRegisterPage());
-	      
-	      registerPage = new  RegisterPage(driver);
-	      loginPage=registerPage.selectAccountBreadcrumb();
-	      Assert.assertTrue(loginPage.didWeNavigateToLoginPage());
-	      driver=navigateBack(driver);
-	      
-	      registerPage = new  RegisterPage(driver);
-	      landingPage=registerPage.selectHomeoption();
-          Assert.assertEquals(driver.getCurrentUrl(), prop.getProperty("landingPageURL"));
-          driver=navigateBack(driver);
-          
-          registerPage = new  RegisterPage(driver);
-	      loginPage=registerPage.selectLoginOption();
-	      Assert.assertTrue(loginPage.didWeNavigateToLoginPage());
-	      driver=navigateBack(driver);
-	      
-	      registerPage = new  RegisterPage(driver);
-	      driver.findElement(By.xpath("//a[@class=\"agree\"]")).click();
-	      WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-	      WebElement xOption = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[.='×']")));
-	      Assert.assertTrue(xOption.isDisplayed());
-	      xOption.click();
-	      
-	      driver.findElement(By.xpath("//input[@type='submit']")).click();
-	      Assert.assertTrue(driver.findElement(By.linkText("Register")).isDisplayed());
-	      driver.findElement(By.linkText("Register")).click();
+	}
 
-	      
+	@Test(priority = 21)
+	public void verifyAllRegisterLink() {
+
+		contactUsPage = registerPage.selectPhoneIconOption();
+		Assert.assertTrue(contactUsPage.didWeNavigateToContactUsPage());
+		driver = navigateBack(driver);
+
+		registerPage = new RegisterPage(driver);
+		loginPage = registerPage.selectHeartIconOption();
+		Assert.assertTrue(loginPage.didWeNavigateToLoginPage());
+		driver = navigateBack(driver);
+
+		registerPage = new RegisterPage(driver);
+		shoppingCartPage = registerPage.selectShoppingCartOption();
+		Assert.assertTrue(shoppingCartPage.didWeNavigateToShoppingCartPage());
+		driver = navigateBack(driver);
+
+		registerPage = new RegisterPage(driver);
+		shoppingCartPage = registerPage.selectCheckoutOption();
+		Assert.assertTrue(shoppingCartPage.didWeNavigateToShoppingCartPage());
+		driver = navigateBack(driver);
+
+		registerPage = new RegisterPage(driver);
+		landingPage = registerPage.selectQfoxLogoOption();
+		Assert.assertEquals(driver.getCurrentUrl(), prop.getProperty("landingPageURL"));
+		driver = navigateBack(driver);
+
+		registerPage = new RegisterPage(driver);
+		searchPage = registerPage.selectSearchOption();
+		searchPage.didWeNavigateToSearchPage();
+		driver = navigateBack(driver);
+
+		registerPage = new RegisterPage(driver);
+		registerPage.clickOnRegisterBreadCrumb();
+		Assert.assertTrue(registerPage.didWeNavigateToRegisterPage());
+
+		registerPage = new RegisterPage(driver);
+		loginPage = registerPage.selectAccountBreadcrumb();
+		Assert.assertTrue(loginPage.didWeNavigateToLoginPage());
+		driver = navigateBack(driver);
+
+		registerPage = new RegisterPage(driver);
+		landingPage = registerPage.selectHomeoption();
+		Assert.assertEquals(driver.getCurrentUrl(), prop.getProperty("landingPageURL"));
+		driver = navigateBack(driver);
+
+		registerPage = new RegisterPage(driver);
+		loginPage = registerPage.selectLoginOption();
+		Assert.assertTrue(loginPage.didWeNavigateToLoginPage());
+		driver = navigateBack(driver);
+
+		registerPage = new RegisterPage(driver);
+		registerPage.clickOnPolicyOption();
+		registerPage.waitAndCheckDisplayStatusOfClosePrivacyPolicyOption(driver, 10);
+		registerPage.closePrivacyPolicyDialog();
+
+		registerPage = new RegisterPage(driver);
+		registerPage.clickOnContinueButton();
+		Assert.assertTrue(registerPage.didWeNavigateToRegisterPage());
+	}
+
+	@Test(priority = 22)
+	public void verifyConfirmPass() {
+		registerPage.enterFirstName(prop.getProperty("firstName"));
+		registerPage.enterLastName(prop.getProperty("lastName"));
+		registerPage.enterEmail(CommonUtils.generateEmale());
+		registerPage.enterTelephone(prop.getProperty("telephone"));
+		registerPage.enterPassword(prop.getProperty("validPassword"));
+		registerPage.selectPrivacyPoliy();
+		registerPage.clickOnContinueButton();
+		String errormsg = "Password confirmation does not match password!";
+		Assert.assertEquals(registerPage.getConfirmPasswordWarning(), errormsg);
+	}
+
+	@Test(priority = 23)
+	public void verifyRegisterPage() {
+
+		Assert.assertTrue(registerPage.didWeNavigateToRegisterPage());
+
+		String expectedPage = "Register Account";
+		Assert.assertEquals(registerPage.getRegisterHeading(), expectedPage);
+
+		String ExpectedUrl = prop.getProperty("registerPageURL");
+		Assert.assertEquals(driver.getCurrentUrl(), ExpectedUrl);
+
+		String ExpectedTitle = prop.getProperty("registerPageTitle");
+		Assert.assertEquals(driver.getTitle(), ExpectedTitle);
+	}
+
+	@Test(priority = 24)
+	public void varifyRegisterPageUI() throws IOException {
+		//5th fail 
+		CommonUtils.takeScreenshot(driver,"\\Screenshot\\actualRegisterUI.png");
+
+		Assert.assertTrue(
+				CommonUtils.compareTwoScreenshots(System.getProperty("user.dir") + "\\Screenshot\\actualRegisterUI.png",
+						System.getProperty("user.dir") + "\\Screenshot\\expectedRegisterUI.png"));
+	}
+
+	@Test(priority = 25)
+	public void varifyRegisterInDifferentTestEnv() {
+		registerPage.enterFirstName(prop.getProperty("firstName"));
+		registerPage.enterLastName(prop.getProperty("lastName"));
+		registerPage.enterEmail(CommonUtils.generateEmale());
+		registerPage.enterTelephone(prop.getProperty("telephone"));
+		registerPage.enterPassword(prop.getProperty("validPassword"));
+		registerPage.enterConfirmPassword(prop.getProperty("validPassword"));
+		registerPage.selectPrivacyPoliy();
+		registerPage.clickOnContinueButton();
+		Assert.assertTrue(registerPage.isLogoutOptionDisplayed());
 	}
 
 }
