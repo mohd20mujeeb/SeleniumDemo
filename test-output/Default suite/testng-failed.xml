@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tutorialsninga.tests.Register">
+      <class name="tutorialsninga.tests.Login">
         <methods>
-          <include name="teardown"/>
           <include name="setup"/>
-          <include name="varifyRegisterPageUI"/>
+          <include name="verifyLoginUsingOnlyKeyboard"/>
         </methods>
-      </class> <!-- tutorialsninga.tests.Register -->
+      </class> <!-- tutorialsninga.tests.Login -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

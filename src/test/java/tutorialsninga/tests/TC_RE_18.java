@@ -15,7 +15,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import base.Base;
+import tutorialsninga.base.Base;
 import utils.CommonUtils;
 
 public class TC_RE_18 extends Base{

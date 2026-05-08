@@ -21,7 +21,6 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import base.Base;
 import pages.AccountPage;
 import pages.AccountSuccessPage;
 import pages.ContactUsPage;
@@ -32,6 +31,7 @@ import pages.NewsletterPage;
 import pages.RegisterPage;
 import pages.SearchPage;
 import pages.ShoppingCartPage;
+import tutorialsninga.base.Base;
 import utils.CommonUtils;
 
 public class Register extends Base {

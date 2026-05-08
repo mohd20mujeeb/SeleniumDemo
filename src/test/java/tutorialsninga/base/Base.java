@@ -1,4 +1,4 @@
-package base;
+package tutorialsninga.base;
 
 import java.time.Duration;
 import java.util.Properties;
