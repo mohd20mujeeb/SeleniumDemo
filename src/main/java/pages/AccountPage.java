@@ -21,8 +21,10 @@ public class AccountPage {
 
 	@FindBy(xpath = "(//a[.='Logout'])[2]")
 	private WebElement LogoutOption;
+	
+	
 
-	public boolean didWeNavigateToAccountPage() {
+	public boolean didWeNavigateToAccountPage(){
 		return editYourAccountInformationOption.isDisplayed();
 	}
 
@@ -38,5 +40,9 @@ public class AccountPage {
 
 	public boolean isUserLogedIn() {
 		return LogoutOption.isDisplayed();
+	}
+	public LogoutPage clickOnLogoutOption() {
+		LogoutOption.click();
+		return new LogoutPage(driver);
 	}
 }

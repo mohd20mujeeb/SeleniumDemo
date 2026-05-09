@@ -6,7 +6,8 @@
       <class name="tutorialsninga.tests.Login">
         <methods>
           <include name="setup"/>
-          <include name="verifyLoginUsingOnlyKeyboard"/>
+          <include name="verifyUnssefullLoginAttempt"/>
+          <include name="teardown"/>
         </methods>
       </class> <!-- tutorialsninga.tests.Login -->
     </classes>

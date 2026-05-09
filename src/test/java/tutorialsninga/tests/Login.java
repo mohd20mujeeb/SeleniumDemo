@@ -3,9 +3,12 @@ package tutorialsninga.tests;
 import java.time.Duration;
 import java.util.Properties;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -15,6 +18,7 @@ import pages.AccountPage;
 import pages.ForgottenPassPage;
 import pages.LandingPage;
 import pages.LoginPage;
+import pages.LogoutPage;
 import tutorialsninga.base.Base;
 import utils.CommonUtils;
 
@@ -25,6 +29,7 @@ public class Login extends Base {
 	LoginPage loginPage;
 	AccountPage accountPage;
 	ForgottenPassPage forgottenPassPage;
+	LogoutPage logoutPage;
 
 	@BeforeMethod
 	public void setup() {
@@ -37,11 +42,11 @@ public class Login extends Base {
 	}
 
 	@AfterMethod
-	public void teardown() {
-		if (driver != null) {
-			driver.quit();
-		}
-	}
+//	public void teardown() {
+//		if (driver != null) {
+//			driver.quit();
+//		}
+//	}
 
 	@Test(priority = 1)
 	public void verifyLoginWithValidCredentials() {
@@ -103,21 +108,73 @@ public class Login extends Base {
 		for (int i = 1; i <= 23; i++) {
 			act.sendKeys(Keys.TAB).perform();
 		}
-		        act.sendKeys(CommonUtils.getValidEmailRandomizeGenerator()).pause(Duration.ofSeconds(1)).sendKeys(Keys.TAB)
+		act.sendKeys(CommonUtils.getValidEmailRandomizeGenerator()).pause(Duration.ofSeconds(1)).sendKeys(Keys.TAB)
 				.pause(Duration.ofSeconds(1)).sendKeys(prop.getProperty("validPassword")).pause(Duration.ofSeconds(1))
 				.sendKeys(Keys.TAB).sendKeys(Keys.TAB).pause(Duration.ofSeconds(1)).sendKeys(Keys.ENTER)
 				.pause(Duration.ofSeconds(1)).perform();
-		        accountPage = new AccountPage(driver);
-				Assert.assertTrue(accountPage.didWeNavigateToAccountPage());
-				Assert.assertTrue(accountPage.isUserLogedIn());
+		accountPage = new AccountPage(driver);
+		Assert.assertTrue(accountPage.didWeNavigateToAccountPage());
+		Assert.assertTrue(accountPage.isUserLogedIn());
 
 	}
+
 	@Test(priority = 8)
 	public void verifyEmailPasswordPlaceholder() {
 		String expectedEmail = "E-Mail Address";
-		String expectedPassword="Password";
+		String expectedPassword = "Password";
 		Assert.assertEquals(loginPage.getEmailPlaceholder(), expectedEmail);
 		Assert.assertEquals(loginPage.getPasswordPlaceholder(), expectedPassword);
+
+	}
+
+	@Test(priority = 9)
+	public void verifyNotGetLogoutByPressingBrowserBackButton() {
+		loginPage.enterEmail(CommonUtils.getValidEmailRandomizeGenerator());
+		loginPage.enterPassword(prop.getProperty("validPassword"));
+		accountPage = loginPage.clickOnLoginButton();
+		driver = navigateBack(driver);
+		loginPage = new LoginPage(driver);
+		accountPage = loginPage.clickOnMyAccountInformation();
+		Assert.assertTrue(accountPage.didWeNavigateToAccountPage());
+	}
+
+	@Test(priority = 10)
+	public void verifyNotLoginafterLogout() {
+		loginPage.enterEmail(CommonUtils.getValidEmailRandomizeGenerator());
+		loginPage.enterPassword(prop.getProperty("validPassword"));
+		accountPage = loginPage.clickOnLoginButton();
+		logoutPage = accountPage.clickOnLogoutOption();
+		Assert.assertTrue(logoutPage.didWeNavigateToLogoutOption());
+		driver = navigateBack(driver);
+		accountPage = new AccountPage(driver);
+		accountPage.clickOnEditYourAccountInformation();
+		loginPage = new LoginPage(driver);
+		Assert.assertTrue(loginPage.didWeNavigateToLoginPage());
+	}
+	@Test(priority = 11)
+	public void verifyUnssefullLoginAttempt() {
+		loginPage.enterEmail(prop.getProperty("existingEmail"));
+		loginPage.enterPassword(prop.getProperty("incorrectPassword"));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		for (int i = 1; i <= 5; i++) {
+			loginPage.clickOnLoginButton();
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@type='submit']")));
+		}
+		String expectedResult = "Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour.";
+		Assert.assertEquals(loginPage.getLimitLoginWarning(), expectedResult);
+		}
+	@Test(priority=12)
+	public void verifyPasswordtextToogled() {
+		String expectedType = "password";
+		Assert.assertEquals(loginPage.getPasswordFieldType(), expectedType);
 		
+	}
+	@Test(priority = 13)
+	public void verifyPasswordTextCopyPossible() {
+		String enterPass = prop.getProperty("validPassword");
+		loginPage.enterPassword(enterPass);
+		driver=loginPage.doubleclickONPasswordFiledAndCopyText(driver);
+		driver=loginPage.pasteCopyTextIntoEmailTextfield(driver);
+		Assert.assertNotEquals(loginPage.getCopiedTextFromEmailField(), enterPass);
 	}
 }
