@@ -42,4 +42,7 @@ public class Base {
 		driver.navigate().back();
 		return driver;
 	}
+	public String getHTMLCodeOfThePage() {
+		return driver.getPageSource();
+	}
 }

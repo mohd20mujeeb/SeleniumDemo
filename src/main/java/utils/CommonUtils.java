@@ -3,6 +3,7 @@ package utils;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Date;
 import java.util.Properties;
@@ -62,6 +63,16 @@ public class CommonUtils {
 		}
 		return driver;
 	}
-	
+	public static void setProperties(String propertKey,String propertyValue,Properties prop) {
+		prop =CommonUtils.loadProperties();
+		prop.setProperty(propertKey, propertyValue);
+		FileWriter fr=null;
+		try {
+			fr = new FileWriter(System.getProperty("user.dir")+"\\src\\test\\resources\\projectData.properties");
+			prop.store(fr,"");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 
 }

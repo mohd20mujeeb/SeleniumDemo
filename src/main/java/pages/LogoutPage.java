@@ -17,7 +17,21 @@ public class LogoutPage {
 	@FindBy(linkText = "Logout")
 	private WebElement logoutBreadcrumb;
 	
+	@FindBy(xpath = "//span[.='My Account']")
+	private WebElement myAccountDropMenu;
+	
+	@FindBy(linkText = "Login")
+	private WebElement loginOption;
+	
 	public boolean didWeNavigateToLogoutOption() {
 		return logoutBreadcrumb.isDisplayed();
 	}
+	public void clickOnMyAccountDropMenu() {
+		myAccountDropMenu.click();
+	}
+	public LoginPage clickOnloginOption() {
+		loginOption.click();
+		return new LoginPage(driver);
+	}
+	
 }

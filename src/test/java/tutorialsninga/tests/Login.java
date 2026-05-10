@@ -15,6 +15,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import pages.AccountPage;
+import pages.ChangePasswordPage;
 import pages.ForgottenPassPage;
 import pages.LandingPage;
 import pages.LoginPage;
@@ -30,6 +31,7 @@ public class Login extends Base {
 	AccountPage accountPage;
 	ForgottenPassPage forgottenPassPage;
 	LogoutPage logoutPage;
+	ChangePasswordPage changePasswordPage;
 
 	@BeforeMethod
 	public void setup() {
@@ -42,11 +44,11 @@ public class Login extends Base {
 	}
 
 	@AfterMethod
-//	public void teardown() {
-//		if (driver != null) {
-//			driver.quit();
-//		}
-//	}
+	public void teardown() {
+		if (driver != null) {
+			driver.quit();
+		}
+	}
 
 	@Test(priority = 1)
 	public void verifyLoginWithValidCredentials() {
@@ -151,7 +153,18 @@ public class Login extends Base {
 		loginPage = new LoginPage(driver);
 		Assert.assertTrue(loginPage.didWeNavigateToLoginPage());
 	}
+
 	@Test(priority = 11)
+	public void verifyLoginUsingInactiveCredentials() {
+		loginPage.enterEmail(prop.getProperty("inactiveAccount"));
+		loginPage.enterPassword(prop.getProperty("validPassword"));
+		accountPage = loginPage.clickOnLoginButton();
+		String expectedErrorMsg = "Warning: No match for E-Mail Address and/or Password.";
+		Assert.assertEquals(loginPage.getWarningMsg(), expectedErrorMsg);
+
+	}
+
+	@Test(priority = 12)
 	public void verifyUnssefullLoginAttempt() {
 		loginPage.enterEmail(prop.getProperty("existingEmail"));
 		loginPage.enterPassword(prop.getProperty("incorrectPassword"));
@@ -162,19 +175,79 @@ public class Login extends Base {
 		}
 		String expectedResult = "Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour.";
 		Assert.assertEquals(loginPage.getLimitLoginWarning(), expectedResult);
-		}
-	@Test(priority=12)
+	}
+
+	@Test(priority = 13)
 	public void verifyPasswordtextToogled() {
 		String expectedType = "password";
 		Assert.assertEquals(loginPage.getPasswordFieldType(), expectedType);
-		
+
 	}
-	@Test(priority = 13)
-	public void verifyPasswordTextCopyPossible() {
+
+	@Test(priority = 14)
+	public void verifyPasswordTextCopyPossible() throws InterruptedException {
 		String enterPass = prop.getProperty("validPassword");
 		loginPage.enterPassword(enterPass);
-		driver=loginPage.doubleclickONPasswordFiledAndCopyText(driver);
-		driver=loginPage.pasteCopyTextIntoEmailTextfield(driver);
+		driver = loginPage.doubleclickONPasswordFiledAndCopyText(driver);
+		driver = loginPage.pasteCopyTextIntoEmailTextfield(driver);
 		Assert.assertNotEquals(loginPage.getCopiedTextFromEmailField(), enterPass);
+	}
+
+	@Test(priority = 15)
+	public void verifyPasswordIsVisbleInPageSourse() {
+		String passwordText = prop.getProperty("samplePassword");
+		loginPage.enterPassword(passwordText);
+		Assert.assertFalse(getHTMLCodeOfThePage().contains(passwordText));
+		loginPage.clickOnLoginButton();
+		Assert.assertFalse(getHTMLCodeOfThePage().contains(passwordText));
+	}
+//	@Test(priority = 16)
+//	public void verifLoginAfterChangingPassword() {
+//		loginPage.enterEmail(prop.getProperty("existingEmail2"));
+//		loginPage.enterPassword(prop.getProperty("validPassword"));
+//		accountPage=loginPage.clickOnLoginButton();
+//		changePasswordPage=accountPage.selectChangeYourPassOption();
+//		changePasswordPage.enterPassword(prop.getProperty("changedPassword"));
+//		changePasswordPage.enterConfirmPassword(prop.getProperty("changedPassword"));
+//		accountPage=changePasswordPage.clickOnContinueButton();
+//		accountPage.clickOnLogoutOption();
+//		loginPage = new LoginPage(driver);
+//		loginPage.enterEmail(prop.getProperty("existingEmail2"));
+//		loginPage.enterPassword(prop.getProperty("changedPassword"));
+//		accountPage=loginPage.clickOnLoginButton();
+//		Assert.assertTrue(accountPage.didWeNavigateToAccountPage());	
+//	}
+
+	@Test(priority = 16)
+	public void verifLoginAfterChangingPassword() {
+		String oldPassword = null;
+		String newPassword = null;
+
+		oldPassword = prop.getProperty("validPassword2");
+		newPassword = prop.getProperty("changedPssword2");
+		loginPage.enterEmail(prop.getProperty("existingEmail2"));
+		loginPage.enterPassword(oldPassword);
+		accountPage = loginPage.clickOnLoginButton();
+		changePasswordPage = accountPage.selectChangeYourPassOption();
+		changePasswordPage.enterPassword(newPassword);
+		changePasswordPage.enterConfirmPassword(newPassword);
+		accountPage = changePasswordPage.clickOnContinueButton();
+		String expectedMessage = "Success: Your password has been successfully updated.";
+		Assert.assertEquals(accountPage.getMessage(), expectedMessage);
+		logoutPage = accountPage.clickOnLogoutOption();
+		logoutPage.clickOnMyAccountDropMenu();
+		loginPage = logoutPage.clickOnloginOption();
+		loginPage.enterEmail(prop.getProperty("existingEmail2"));
+		loginPage.enterPassword(oldPassword);
+		loginPage.clickOnLoginButton();
+		String expectedErrorMsg = "Warning: No match for E-Mail Address and/or Password.";
+		Assert.assertEquals(loginPage.getWarningMsg(), expectedErrorMsg);
+		loginPage.clearPasswordField();
+		loginPage.enterPassword(newPassword);
+		accountPage = loginPage.clickOnLoginButton();
+		Assert.assertTrue(accountPage.isUserLogedIn());
+        CommonUtils.setProperties("validPassword2", newPassword,prop);
+        CommonUtils.setProperties("changedPssword2", oldPassword,prop);
+
 	}
 }

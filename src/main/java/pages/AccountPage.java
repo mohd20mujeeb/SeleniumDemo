@@ -22,6 +22,12 @@ public class AccountPage {
 	@FindBy(xpath = "(//a[.='Logout'])[2]")
 	private WebElement LogoutOption;
 	
+	@FindBy(xpath = "//a[.='Change your password']")
+	private WebElement changePasswordOption;
+	
+	@FindBy(xpath = "//div[.='Success: Your password has been successfully updated.']")
+	private WebElement message; 
+	
 	
 
 	public boolean didWeNavigateToAccountPage(){
@@ -44,5 +50,12 @@ public class AccountPage {
 	public LogoutPage clickOnLogoutOption() {
 		LogoutOption.click();
 		return new LogoutPage(driver);
+	}
+	public ChangePasswordPage selectChangeYourPassOption() {
+		changePasswordOption.click();
+		return new ChangePasswordPage(driver);
+	}
+	public String getMessage() {
+		return message.getText();
 	}
 }

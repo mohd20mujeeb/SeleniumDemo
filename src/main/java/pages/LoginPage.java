@@ -122,4 +122,7 @@ public class LoginPage {
 	public String getCopiedTextFromEmailField() {
 		return emailField.getDomProperty("value");
 	}
+	public void clearPasswordField() {
+		 passwordField.clear();
+	}
 }
