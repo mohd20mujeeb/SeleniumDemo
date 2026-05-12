@@ -102,17 +102,7 @@ public class RegisterPage {
 	@FindBy(css = "label[for='input-confirm']")
 	private WebElement conpassLable;
 
-	@FindBy(xpath = "//a/i[@class='fa fa-phone']")
-	private WebElement phoneIconOption;
-
-	@FindBy(xpath = "//a/i[@class='fa fa-heart']")
-	private WebElement heartIconOption;
-
-	@FindBy(xpath = "//a[@title='Shopping Cart']")
-	private WebElement shopingCartOption;
-
-	@FindBy(xpath = "//span[.='Checkout']")
-	private WebElement checkOutOption;
+	
 
 	@FindBy(linkText = "Qafox.com")
 	private WebElement qafozLogoOption;
@@ -478,25 +468,7 @@ public class RegisterPage {
 		return confirmField.getAttribute("type");
 	}
 
-	public ContactUsPage selectPhoneIconOption() {
-		phoneIconOption.click();
-		return new ContactUsPage(driver);
-	}
-
-	public LoginPage selectHeartIconOption() {
-		heartIconOption.click();
-		return new LoginPage(driver);
-	}
-
-	public ShoppingCartPage selectShoppingCartOption() {
-		shopingCartOption.click();
-		return new ShoppingCartPage(driver);
-	}
-
-	public ShoppingCartPage selectCheckoutOption() {
-		checkOutOption.click();
-		return new ShoppingCartPage(driver);
-	}
+	
 
 	public LandingPage selectQfoxLogoOption() {
 		qafozLogoOption.click();
@@ -535,6 +507,8 @@ public class RegisterPage {
 	public boolean isLogoutOptionDisplayed() {
 		return LogoutOption.isDisplayed();
 	}
-	
+	public WebDriver getDriverFromRegisterPAge() {
+		return driver;
+	}
 
 }

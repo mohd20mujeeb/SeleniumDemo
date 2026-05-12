@@ -201,22 +201,6 @@ public class Login extends Base {
 		loginPage.clickOnLoginButton();
 		Assert.assertFalse(getHTMLCodeOfThePage().contains(passwordText));
 	}
-//	@Test(priority = 16)
-//	public void verifLoginAfterChangingPassword() {
-//		loginPage.enterEmail(prop.getProperty("existingEmail2"));
-//		loginPage.enterPassword(prop.getProperty("validPassword"));
-//		accountPage=loginPage.clickOnLoginButton();
-//		changePasswordPage=accountPage.selectChangeYourPassOption();
-//		changePasswordPage.enterPassword(prop.getProperty("changedPassword"));
-//		changePasswordPage.enterConfirmPassword(prop.getProperty("changedPassword"));
-//		accountPage=changePasswordPage.clickOnContinueButton();
-//		accountPage.clickOnLogoutOption();
-//		loginPage = new LoginPage(driver);
-//		loginPage.enterEmail(prop.getProperty("existingEmail2"));
-//		loginPage.enterPassword(prop.getProperty("changedPassword"));
-//		accountPage=loginPage.clickOnLoginButton();
-//		Assert.assertTrue(accountPage.didWeNavigateToAccountPage());	
-//	}
 
 	@Test(priority = 16)
 	public void verifLoginAfterChangingPassword() {
@@ -246,8 +230,11 @@ public class Login extends Base {
 		loginPage.enterPassword(newPassword);
 		accountPage = loginPage.clickOnLoginButton();
 		Assert.assertTrue(accountPage.isUserLogedIn());
-        CommonUtils.setProperties("validPassword2", newPassword,prop);
-        CommonUtils.setProperties("changedPssword2", oldPassword,prop);
-
+		CommonUtils.setProperties("validPassword2", newPassword, prop);
+		CommonUtils.setProperties("changedPssword2", oldPassword, prop);
+	}
+	@Test(priority = 17)
+	public void varifyingNavigstingToDifferentPagesFromLoginPage() {
+		
 	}
 }

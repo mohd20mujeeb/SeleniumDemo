@@ -25,6 +25,7 @@ import pages.AccountPage;
 import pages.AccountSuccessPage;
 import pages.ContactUsPage;
 import pages.EditAccountInformationPage;
+import pages.HeadersOption;
 import pages.LandingPage;
 import pages.LoginPage;
 import pages.NewsletterPage;
@@ -48,7 +49,7 @@ public class Register extends Base {
 	ContactUsPage contactUsPage;
 	ShoppingCartPage shoppingCartPage;
 	SearchPage searchPage;
-
+	HeadersOption headersOption;
 	@BeforeMethod
 	public void setup() {
 
@@ -725,22 +726,32 @@ public class Register extends Base {
 	@Test(priority = 21)
 	public void verifyAllRegisterLink() {
 
-		contactUsPage = registerPage.selectPhoneIconOption();
+		driver=registerPage.getDriverFromRegisterPAge();
+		
+		headersOption = new HeadersOption(driver); 
+		
+		contactUsPage = headersOption.selectPhoneIconOption();
 		Assert.assertTrue(contactUsPage.didWeNavigateToContactUsPage());
 		driver = navigateBack(driver);
 
 		registerPage = new RegisterPage(driver);
-		loginPage = registerPage.selectHeartIconOption();
+		driver=registerPage.getDriverFromRegisterPAge();
+		headersOption = new HeadersOption(driver); 
+		loginPage = headersOption.selectHeartIconOption();
 		Assert.assertTrue(loginPage.didWeNavigateToLoginPage());
 		driver = navigateBack(driver);
 
 		registerPage = new RegisterPage(driver);
-		shoppingCartPage = registerPage.selectShoppingCartOption();
+		driver=registerPage.getDriverFromRegisterPAge();
+		headersOption = new HeadersOption(driver);
+		shoppingCartPage = headersOption.selectShoppingCartOption();
 		Assert.assertTrue(shoppingCartPage.didWeNavigateToShoppingCartPage());
 		driver = navigateBack(driver);
 
 		registerPage = new RegisterPage(driver);
-		shoppingCartPage = registerPage.selectCheckoutOption();
+		driver=registerPage.getDriverFromRegisterPAge();
+		headersOption = new HeadersOption(driver);
+		shoppingCartPage = headersOption.selectCheckoutOption();
 		Assert.assertTrue(shoppingCartPage.didWeNavigateToShoppingCartPage());
 		driver = navigateBack(driver);
 
